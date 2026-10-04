@@ -89,6 +89,22 @@
     background:var(--brand);color:#fff;font-weight:800;display:grid;place-items:center;
   }
 
+  /* Samples */
+  .sample{
+    display:block;text-decoration:none;color:inherit;background:var(--card);
+    border:1px solid var(--line);border-radius:18px;overflow:hidden;
+    transition:transform .15s ease,box-shadow .15s ease;
+  }
+  .sample:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(31,26,20,.12)}
+  .sample .thumb{height:120px;display:grid;place-items:center;font-size:2.6rem}
+  .sample.s1 .thumb{background:linear-gradient(135deg,#f7e3c8,#e9c79b)}
+  .sample.s2 .thumb{background:linear-gradient(135deg,#f9d9cf,#e8a48f)}
+  .sample.s3 .thumb{background:linear-gradient(135deg,#ffe3b3,#f5b25c)}
+  .sample .body{padding:18px 20px 20px}
+  .sample .kind{font-size:.75rem;font-weight:700;color:var(--brand-dark);text-transform:uppercase;letter-spacing:.05em}
+  .sample h3{font-size:1.15rem;margin:4px 0 10px}
+  .sample .view{font-weight:700;font-size:.92rem;color:var(--brand)}
+
   /* CTA */
   .cta{
     background:var(--ink);color:#fff;border-radius:26px;padding:44px 24px;text-align:center;
@@ -174,6 +190,28 @@
         <div class="card"><div class="ico">🎨</div><h3>Matches your brand</h3><p>Your colours, your logo and your photos, designed to look premium.</p></div>
         <div class="card"><div class="ico">⚡</div><h3>Fast loading</h3><p>Built to open quickly even on slow mobile networks.</p></div>
         <div class="card"><div class="ico">💬</div><h3>WhatsApp ordering</h3><p>Optional: let customers send their order straight to your WhatsApp.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SAMPLES -->
+  <section id="samples">
+    <div class="wrap">
+      <h2>See our work</h2>
+      <p class="sub">Tap any sample to open the live menu, just like your customers will see it.</p>
+      <div class="grid three">
+        <a class="sample s1" href="https://menu-cards.pages.dev/bento-cafe" target="_blank" rel="noopener">
+          <div class="thumb">☕</div>
+          <div class="body"><div class="kind">Cafe</div><h3>Bento Cafe</h3><span class="view">View live menu &rarr;</span></div>
+        </a>
+        <a class="sample s2" href="https://menu-cards.pages.dev/heaven-darbar" target="_blank" rel="noopener">
+          <div class="thumb">🍛</div>
+          <div class="body"><div class="kind">Restaurant</div><h3>Heaven Darbar</h3><span class="view">View live menu &rarr;</span></div>
+        </a>
+        <a class="sample s3" href="https://menu-cards.pages.dev/pizza-lo" target="_blank" rel="noopener">
+          <div class="thumb">🍕</div>
+          <div class="body"><div class="kind">Pizza Outlet</div><h3>Pizza Lo</h3><span class="view">View live menu &rarr;</span></div>
+        </a>
       </div>
     </div>
   </section>
