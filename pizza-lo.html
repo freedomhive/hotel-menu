@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>PizzaLo | Digital Menu</title>
+<meta name="description" content="PizzaLo's digital menu — freshly baked pizzas, burgers, fries, coffee and shakes. Browse the full menu, search for a dish, and see today's prices." />
+
+<meta property="og:title" content="PizzaLo | Digital Menu" />
+<meta property="og:description" content="Good Food, Good Mood. Browse PizzaLo's full menu of pizzas, burgers, fries, coffee and shakes." />
+<meta property="og:type" content="website" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍕</text></svg>" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&family=Caveat:wght@600;700&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero" style="--hero-image:url('https://images.pexels.com/photos/2741457/pexels-photo-2741457.jpeg?auto=compress&cs=tinysrgb&w=1400');">
+  <div class="hero__inner">
+    <div class="hero__brand">
+      <p class="hero__logo">
+        <span class="hero__logo-mark" aria-hidden="true">🍕</span>
+        Pizza<span class="hero__logo-lo">Lo</span>
+      </p>
+      <p class="hero__tagline">Good Food, Good Mood</p>
+    </div>
+    <p class="hero__flair" aria-hidden="true">Baked Fresh,<br />Served Hot</p>
+  </div>
+</header>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar" aria-label="Primary">
+  <div class="navbar__inner">
+    <div class="navbar__links">
+      <a class="navbar__link is-active" href="#menu" data-target="menu">Menu</a>
+      <a class="navbar__link" href="#about" data-target="about">About</a>
+      <a class="navbar__link" href="#gallery" data-target="gallery">Gallery</a>
+      <a class="navbar__link" href="#contact" data-target="contact">Contact</a>
+    </div>
+    <label class="navbar__search" for="searchInput">
+      <svg class="navbar__search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <circle cx="11" cy="11" r="7"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <span class="visually-hidden">Search menu items</span>
+      <input class="navbar__search-input" id="searchInput" type="search" placeholder="Search menu items…" autocomplete="off" />
+    </label>
+  </div>
+</nav>
+
+<main>
+  <!-- ===================== MENU INTRO ===================== -->
+  <section class="menu-intro" id="menu">
+    <h1 class="menu-intro__title">OUR <span>MENU</span></h1>
+    <div class="menu-intro__divider" aria-hidden="true">🍴</div>
+    <p class="menu-intro__subtitle">Delicious Pizzas, Tasty Bites &amp; More</p>
+  </section>
+
+  <!-- ===================== CATEGORY NAV ===================== -->
+  <div class="category-nav">
+    <div class="category-nav__scroll" id="categoryScroll" role="tablist" aria-label="Menu categories"></div>
+  </div>
+
+  <!-- ===================== MENU SECTIONS (rendered by script.js) ===================== -->
+  <div class="menu-wrap">
+    <div id="menuSections"></div>
+    <p class="no-results" id="noResults">No menu items found.</p>
+  </div>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="about-section" id="about">
+    <h2 class="section-heading">About PizzaLo</h2>
+    <p>PizzaLo is your neighbourhood spot for freshly baked pizzas, crispy burgers and fries, and a cup of good coffee — made fresh, served fast, and always with good mood. Scan, browse, and order at the counter whenever you're ready.</p>
+  </section>
+
+  <!-- ===================== GALLERY ===================== -->
+  <section class="gallery-section" id="gallery">
+    <h2 class="section-heading">Gallery</h2>
+    <div class="gallery-grid" id="galleryGrid"></div>
+  </section>
+</main>
+
+<!-- ===================== ITEM MODAL ===================== -->
+<div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalName">
+  <div class="modal">
+    <div class="modal__img-wrap">
+      <img class="modal__img" id="modalImg" src="" alt="" />
+      <button class="modal__close" id="modalClose" type="button" aria-label="Close">✕</button>
+    </div>
+    <div class="modal__body">
+      <p class="modal__name" id="modalName">
+        <span class="veg-dot" aria-hidden="true"></span>
+        <span id="modalNameText"></span>
+      </p>
+      <p class="modal__desc" id="modalDesc"></p>
+      <p class="modal__price" id="modalPrice"></p>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer" id="contact">
+  <svg class="footer__wave" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,20 C150,45 350,0 600,18 C850,36 1050,4 1200,20 L1200,0 L0,0 Z" style="fill:var(--color-bg)"></path>
+  </svg>
+  <div class="footer__inner">
+    <div class="footer__col">
+      <p class="footer__brand">Pizza<span>Lo</span></p>
+      <address class="footer__address">
+        [Restaurant Address]<br />
+        [Phone Number]
+      </address>
+    </div>
+
+    <div class="footer__middle">
+      <p class="footer__see-you">See You Soon! ♥</p>
+      <div class="footer__social">
+        <a href="#" aria-label="PizzaLo on Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1"></circle></svg>
+        </a>
+        <a href="#" aria-label="PizzaLo on Facebook">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 8h-2a2 2 0 0 0-2 2v2H9v3h2v7h3v-7h2.2l.8-3H14v-1.5c0-.4.3-.8.8-.8H16z"></path></svg>
+        </a>
+        <a href="#" aria-label="PizzaLo on WhatsApp">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 12a8 8 0 1 1-3.6-6.7"></path><path d="M12 4a8 8 0 0 1 8 8"></path><path d="M8.5 9.5c0 3.5 2.5 6 6 6l1-2-2.7-1-1 1c-1-.6-1.8-1.4-2.3-2.3l1-1-1-2.7z"></path></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__right">
+      <p class="footer__hours">[Opening Hours]</p>
+      <p class="footer__tags">Pizza • Burgers • Shakes • Good Vibes</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
