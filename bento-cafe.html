@@ -3,28 +3,28 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#1f3d2b">
-<meta name="description" content="Digital menu of Tea Bento Cafe — teas, coffee, bento boxes, snacks and desserts.">
+<meta name="theme-color" content="#3b2a25">
+<meta name="description" content="Digital menu of Tea Bento Café — tea, pizza, burgers, momos, sandwiches, shakes and more.">
 <title>Tea Bento Cafe — Menu</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --deep:#1f3d2b;
-  --matcha:#5b8a47;
-  --leaf:#e6efdc;
+  --deep:#3b2a25;
+  --matcha:#96530a;
+  --leaf:#fbebd3;
   --cream:#faf6ee;
   --paper:#fffdf9;
   --ink:#1e2a22;
   --muted:#6d7a70;
   --line:#ece5d6;
   --accent:#c8553d;
-  --gold:#c9a24b;
+  --gold:#f4a63a;
   --veg:#2e9b4f;
   --nonveg:#c0392b;
   --radius:18px;
-  --shadow:0 6px 24px rgba(31,61,43,.08);
+  --shadow:0 6px 24px rgba(59,42,37,.08);
   --sticky-h:120px;
 }
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
@@ -44,9 +44,9 @@ img{display:block;max-width:100%}
 .hero{
   position:relative;
   background:
-    radial-gradient(circle at 85% 10%, rgba(201,162,75,.28), transparent 45%),
-    radial-gradient(circle at 10% 100%, rgba(91,138,71,.45), transparent 50%),
-    linear-gradient(160deg,#1f3d2b 0%,#2c5a3c 100%);
+    radial-gradient(circle at 85% 10%, rgba(244,166,58,.30), transparent 45%),
+    radial-gradient(circle at 10% 100%, rgba(244,166,58,.18), transparent 50%),
+    linear-gradient(160deg,#3b2a25 0%,#50392f 100%);
   color:#fff;
   padding:calc(34px + env(safe-area-inset-top)) 22px 64px;
   text-align:center;
@@ -64,14 +64,11 @@ img{display:block;max-width:100%}
 }
 .logo{
   position:relative;z-index:1;
-  width:78px;height:78px;margin:0 auto 14px;
+  width:110px;height:110px;margin:0 auto 14px;
   border-radius:50%;
-  background:rgba(255,255,255,.1);
-  border:1.5px solid rgba(255,255,255,.35);
-  display:grid;place-items:center;
-  backdrop-filter:blur(4px);
+  box-shadow:0 8px 24px rgba(0,0,0,.35);
 }
-.logo svg{width:44px;height:44px}
+.logo img{width:100%;height:100%;border-radius:50%}
 .steam{animation:steam 3.2s ease-in-out infinite;transform-origin:center bottom}
 .steam:nth-child(2){animation-delay:.6s}
 .steam:nth-child(3){animation-delay:1.2s}
@@ -121,7 +118,7 @@ img{display:block;max-width:100%}
   font:inherit;font-size:15px;color:var(--ink);
   outline:none;transition:border-color .2s, box-shadow .2s;
 }
-.search input:focus{border-color:var(--matcha);box-shadow:0 0 0 4px rgba(91,138,71,.15)}
+.search input:focus{border-color:var(--matcha);box-shadow:0 0 0 4px rgba(244,166,58,.28)}
 .search .clear{
   position:absolute;right:8px;top:50%;transform:translateY(-50%);
   width:28px;height:28px;border-radius:50%;
@@ -157,12 +154,12 @@ img{display:block;max-width:100%}
   display:inline-flex;align-items:center;gap:6px;
   transition:all .2s;
 }
-.chip.active{background:var(--deep);border-color:var(--deep);color:#fff;box-shadow:0 4px 12px rgba(31,61,43,.25)}
+.chip.active{background:var(--deep);border-color:var(--deep);color:#fff;box-shadow:0 4px 12px rgba(59,42,37,.25)}
 
 /* ---------- Menu ---------- */
 main{max-width:820px;margin:0 auto;padding:6px 16px 40px}
 .section{padding-top:22px;scroll-margin-top:calc(var(--sticky-h) + 4px)}
-.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:12px}
+.section-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
 .section-head h2{font-family:'Playfair Display',serif;font-size:24px;line-height:1.15;color:var(--deep)}
 .section-head p{font-size:13px;color:var(--muted);margin-top:3px}
 .count{font-size:12px;font-weight:600;color:var(--matcha);background:var(--leaf);padding:4px 10px;border-radius:999px;white-space:nowrap}
@@ -221,7 +218,7 @@ main{max-width:820px;margin:0 auto;padding:6px 16px 40px}
 }
 .pic.done::before{display:none}
 @keyframes shimmer{from{background-position:200% 0}to{background-position:-200% 0}}
-.pic.noimg{background:linear-gradient(135deg,#e6efdc,#f6e7c6);display:grid;place-items:center}
+.pic.noimg{background:linear-gradient(135deg,#fbebd3,#f6e7c6);display:grid;place-items:center}
 .pic.noimg::after{content:attr(data-emoji);font-size:42px}
 
 .empty{
@@ -233,7 +230,7 @@ main{max-width:820px;margin:0 auto;padding:6px 16px 40px}
 
 /* ---------- Footer ---------- */
 footer{
-  background:var(--deep);color:#e8f0e2;text-align:center;
+  background:var(--deep);color:#f3e8dc;text-align:center;
   padding:34px 22px calc(34px + env(safe-area-inset-bottom));
   border-radius:28px 28px 0 0;
 }
@@ -272,7 +269,7 @@ footer p{font-size:13.5px;opacity:.85;margin:4px 0}
 }
 .sheet.open{transform:none}
 .sheet .grab{width:44px;height:5px;border-radius:5px;background:rgba(255,255,255,.8);position:absolute;top:10px;left:50%;transform:translateX(-50%);z-index:2;box-shadow:0 1px 4px rgba(0,0,0,.25)}
-.sheet .hero-img{position:relative;height:260px;background:linear-gradient(135deg,#e6efdc,#f6e7c6);display:grid;place-items:center;font-size:80px}
+.sheet .hero-img{position:relative;height:260px;background:linear-gradient(135deg,#fbebd3,#f6e7c6);display:grid;place-items:center;font-size:80px}
 .sheet .hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .sheet .close{
   position:absolute;top:12px;right:12px;z-index:3;
@@ -295,7 +292,7 @@ footer p{font-size:13.5px;opacity:.85;margin:4px 0}
   position:fixed;right:16px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:40;
   width:46px;height:46px;border-radius:50%;
   background:var(--deep);color:#fff;display:grid;place-items:center;
-  box-shadow:0 8px 20px rgba(31,61,43,.35);
+  box-shadow:0 8px 20px rgba(59,42,37,.35);
   opacity:0;transform:translateY(14px);pointer-events:none;transition:all .3s;
 }
 .top.show{opacity:1;transform:none;pointer-events:auto}
@@ -318,22 +315,13 @@ footer p{font-size:13.5px;opacity:.85;margin:4px 0}
 <body>
 
 <header class="hero">
-  <div class="logo" aria-hidden="true">
-    <svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-      <path class="steam" d="M17 12c-2-2 2-4 0-7"/>
-      <path class="steam" d="M24 12c-2-2 2-4 0-7"/>
-      <path class="steam" d="M31 12c-2-2 2-4 0-7"/>
-      <path d="M9 19h28v8a11 11 0 0 1-11 11h-6A11 11 0 0 1 9 27z" fill="rgba(255,255,255,.12)"/>
-      <path d="M37 22h2.5a3.5 3.5 0 0 1 0 7H36"/>
-      <path d="M13 43h20"/>
-    </svg>
-  </div>
+  <div class="logo"><img src="data:image/webp;base64,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" alt="Tea Bento Café logo" width="110" height="110"></div>
   <h1>Tea <span>Bento</span> Cafe</h1>
-  <div class="tagline">Tea · Bento · Bites</div>
+  <div class="tagline">Café Menu</div>
   <div class="pills">
     <span class="pill"><i></i><span id="hours">Open daily</span></span>
-    <span class="pill">☕ Freshly brewed</span>
-    <span class="pill">🍱 Made to order</span>
+    <span class="pill">🍕 Pizza &amp; Burgers</span>
+    <span class="pill">☕ Tea, Shakes &amp; more</span>
   </div>
 </header>
 
@@ -341,10 +329,9 @@ footer p{font-size:13.5px;opacity:.85;margin:4px 0}
   <div class="search-row">
     <label class="search">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-      <input id="q" type="search" placeholder="Search tea, bento, dessert…" autocomplete="off" enterkeyhint="search" aria-label="Search the menu">
+      <input id="q" type="search" placeholder="Search pizza, momos, shakes…" autocomplete="off" enterkeyhint="search" aria-label="Search the menu">
       <button class="clear" id="clear" aria-label="Clear search">×</button>
     </label>
-    <button class="veg-toggle" id="veg" aria-pressed="false"><span class="box"></span>Veg</button>
   </div>
   <nav class="chips" id="chips" aria-label="Menu categories"></nav>
 </div>
@@ -362,13 +349,9 @@ footer p{font-size:13.5px;opacity:.85;margin:4px 0}
   <h3>Tea Bento Cafe</h3>
   <p id="addr"></p>
   <p id="phone"></p>
-  <div class="legend">
-    <span><i class="vdot"></i>Vegetarian</span>
-    <span><i class="vdot nv"></i>Non-vegetarian</span>
-  </div>
-  <p>Prices are in Indian Rupees. Taxes as applicable.</p>
+  <p>All prices are in Indian Rupees (₹).</p>
   <div class="links" id="links"></div>
-  <div class="credit">Photos from Pexels · Sample menu, items and prices will change</div>
+  <div class="credit">Photos from Pexels · Images are for illustration</div>
 </footer>
 
 <div class="overlay" id="overlay"></div>
@@ -378,7 +361,7 @@ footer p{font-size:13.5px;opacity:.85;margin:4px 0}
   <button class="close" id="s-close" aria-label="Close">×</button>
   <div class="body">
     <h3 id="s-name"></h3>
-    <div class="meta"><i class="vdot" id="s-veg"></i><span class="price" id="s-price"></span><span id="s-tag"></span></div>
+    <div class="meta"><span class="price" id="s-price"></span><span id="s-tag"></span></div>
     <p class="full" id="s-desc"></p>
     <div class="note">Please tell our staff about any allergies or special requests when you order.</div>
   </div>
@@ -393,63 +376,99 @@ footer p{font-size:13.5px;opacity:.85;margin:4px 0}
    EDIT THIS BLOCK — cafe details
    ===================================================================== */
 const CONFIG = {
-  hours:   "Open daily · 8 AM – 11 PM",
+  hours:   "Now serving",
   address: "Your cafe address goes here",
   phone:   "+91 85518 02228",     // digits and + only are used for the call link
   whatsapp:"918551802228",        // country code + number, no + or spaces
-  instagram:"https://instagram.com/yourcafe"
+  instagram:"https://www.instagram.com/teabentocafe/"
 };
 
 /* =====================================================================
    EDIT THIS BLOCK — menu items (placeholder data)
-   n: name · d: description · p: price (₹) · v: 1 veg / 0 non-veg
-   i: Pexels photo id · e: emoji shown if image fails · t: optional badge
+   n: name · d: description · p: price (₹)
+   i: Pexels photo id (the number at the end of the photo URL) · e: emoji shown if the image fails
    ===================================================================== */
 const MENU = [
-  { id:"tea", title:"Signature Teas", sub:"Brewed fresh, steeped slow", icon:"🍵", items:[
-    { n:"Masala Chai", d:"Assam tea simmered with ginger, cardamom and cinnamon, finished with creamy milk.", p:80, v:1, i:1417945, e:"☕", t:"Bestseller" },
-    { n:"Kashmiri Kahwa", d:"Saffron green tea with almonds, cinnamon and a hint of rose petals.", p:130, v:1, i:230477, e:"🍵", t:"Chef's Pick" },
-    { n:"Jasmine Green Tea", d:"Delicate jasmine-scented green tea served in a classic teapot.", p:110, v:1, i:1493080, e:"🫖" },
-    { n:"Matcha Latte", d:"Ceremonial-grade matcha whisked with steamed milk and a touch of honey.", p:190, v:1, i:5946081, e:"🍵", t:"New" },
-    { n:"Earl Grey Classic", d:"Black tea scented with bergamot, served with lemon on the side.", p:100, v:1, i:1638280, e:"🫖" },
-    { n:"Lemon Ginger Honey Tea", d:"Warm, soothing and zesty — perfect for a rainy evening.", p:120, v:1, i:4226896, e:"🍯" }
+  { id:"tea", title:"Tea", icon:"🍵", items:[
+    { n:"Regular Tea", d:"Classic hot milk tea.", p:15, i:37186989, e:"☕" },
+    { n:"Adrak Tea", d:"Milk tea brewed with fresh ginger.", p:20, i:29650995, e:"🫚" },
+    { n:"Lemon Tea", d:"Light hot tea with a squeeze of lemon.", p:20, i:29647415, e:"🍋" }
   ]},
-  { id:"cold", title:"Iced & Bubble Tea", sub:"Cool, fruity and fun", icon:"🧋", items:[
-    { n:"Peach Iced Tea", d:"Black tea shaken with ripe peach syrup and plenty of ice.", p:150, v:1, i:792613, e:"🍑", t:"Bestseller" },
-    { n:"Hibiscus Cooler", d:"Tart hibiscus infusion with orange and a sprig of fresh mint.", p:140, v:1, i:1233319, e:"🌺" },
-    { n:"Taro Bubble Milk Tea", d:"Creamy taro milk tea topped with chewy tapioca pearls.", p:200, v:1, i:4051523, e:"🧋", t:"Chef's Pick" },
-    { n:"Brown Sugar Boba", d:"Fresh milk with caramelised brown sugar syrup and warm boba.", p:210, v:1, i:5946083, e:"🧋" },
-    { n:"Iced Matcha Cloud", d:"Cold matcha topped with a soft vanilla cream cloud.", p:200, v:1, i:3026804, e:"🍃", t:"New" },
-    { n:"Mint Lemonade", d:"Fresh lime, crushed mint and a splash of soda.", p:120, v:1, i:1194030, e:"🍋" }
+  { id:"pizza", title:"Pizza", icon:"🍕", items:[
+    { n:"Cheese Margarita Pizza", d:"Classic pizza with a generous layer of melted cheese.", p:100, i:8176833, e:"🍕" },
+    { n:"Veg Cheese Pizza", d:"Loaded with vegetables and cheese.", p:110, i:11452088, e:"🍕" },
+    { n:"Cheese And Corn Pizza", d:"Sweet corn and melted cheese.", p:110, i:31450854, e:"🌽" },
+    { n:"Paneer Classic Pizza", d:"Topped with soft paneer and cheese.", p:130, i:19081127, e:"🍕" },
+    { n:"Tandoori Paneer Pizza", d:"Tandoori-spiced paneer with cheese.", p:130, i:11974635, e:"🍕" },
+    { n:"Paneer Delight Pizza", d:"Paneer, veggies and extra cheese.", p:140, i:11974636, e:"🍕" },
+    { n:"Paneer Makhni Pizza", d:"Paneer in a rich, creamy makhni-style topping.", p:140, i:19081131, e:"🍕" }
   ]},
-  { id:"coffee", title:"Coffee Corner", sub:"For the bean lovers", icon:"☕", items:[
-    { n:"Cappuccino", d:"Double-shot espresso with velvety steamed milk and silky foam.", p:150, v:1, i:302899, e:"☕", t:"Bestseller" },
-    { n:"Café Latte", d:"Smooth espresso with plenty of steamed milk and latte art.", p:160, v:1, i:312418, e:"☕" },
-    { n:"Iced Cold Coffee", d:"Thick, chilled coffee blended with ice cream and chocolate drizzle.", p:170, v:1, i:2074130, e:"🧊" },
-    { n:"Hazelnut Mocha", d:"Espresso, dark chocolate and hazelnut syrup under whipped cream.", p:190, v:1, i:350478, e:"🍫", t:"Chef's Pick" },
-    { n:"Americano", d:"Bold espresso lengthened with hot water. Clean and strong.", p:120, v:1, i:324028, e:"☕" }
+  { id:"burgers", title:"Burgers", icon:"🍔", items:[
+    { n:"Veg Burger", d:"Crispy veg patty in a soft bun.", p:50, i:19709551, e:"🍔" },
+    { n:"Veg Classic Burger", d:"Veg patty with fresh lettuce, tomato and sauce.", p:60, i:3607284, e:"🍔" },
+    { n:"Spinach Corn Burger", d:"Spinach and corn patty in a toasted bun.", p:70, i:12431640, e:"🍔" },
+    { n:"Veg Cheese Burger", d:"Veg patty topped with a melted cheese slice.", p:70, i:28636771, e:"🍔" },
+    { n:"Tandoori Paneer Burger", d:"Tandoori paneer patty with fresh veggies.", p:80, i:31109615, e:"🍔" }
   ]},
-  { id:"bento", title:"Bento Boxes", sub:"A complete meal in a box", icon:"🍱", items:[
-    { n:"Teriyaki Chicken Bento", d:"Glazed chicken, steamed rice, tamago, pickled veggies and miso soup.", p:349, v:0, i:2098085, e:"🍱", t:"Bestseller" },
-    { n:"Paneer Katsu Bento", d:"Crispy panko paneer, Japanese curry sauce, rice, slaw and edamame.", p:299, v:1, i:1640777, e:"🍛", t:"Chef's Pick" },
-    { n:"Veg Sushi Bento", d:"Assorted veggie rolls with wasabi, ginger and soy, plus a side salad.", p:279, v:1, i:2098092, e:"🍣" },
-    { n:"Mushroom Rice Bento", d:"Garlic butter mushrooms over sticky rice with sesame greens.", p:289, v:1, i:1279330, e:"🍄" },
-    { n:"Karaage Chicken Bento", d:"Japanese fried chicken, rice, kimchi slaw and a lemon wedge.", p:339, v:0, i:60616, e:"🍗", t:"Spicy" },
-    { n:"Veg Dumpling Bento", d:"Pan-fried veg gyoza, sesame noodles and a sweet chilli dip.", p:259, v:1, i:955137, e:"🥟" }
+  { id:"beverages", title:"Beverages", icon:"🥤", items:[
+    { n:"Hot Coffee", d:"Freshly made hot coffee.", p:30, i:29616351, e:"☕" },
+    { n:"Lemon Ice Tea", d:"Chilled tea with lemon and ice.", p:40, i:11009226, e:"🧊" },
+    { n:"Cold Coffee", d:"Creamy chilled coffee.", p:50, i:4869290, e:"🧋" },
+    { n:"Mango Milk Shake", d:"Thick, chilled mango shake.", p:90, i:32503389, e:"🥭" },
+    { n:"Strawberry Milk Shake", d:"Thick, chilled strawberry shake.", p:90, i:39344590, e:"🍓" },
+    { n:"Kitkat Milk Shake", d:"Chocolatey milkshake with KitKat.", p:100, i:39947611, e:"🍫" }
   ]},
-  { id:"snacks", title:"Snacks & Sides", sub:"Perfect with your cuppa", icon:"🍟", items:[
-    { n:"Veg Steamed Momos", d:"Six soft dumplings stuffed with cabbage and carrot, served with spicy chutney.", p:140, v:1, i:1410235, e:"🥟", t:"Bestseller" },
-    { n:"Crispy Corn", d:"Golden fried sweet corn tossed with pepper, onion and herbs.", p:160, v:1, i:1117862, e:"🌽" },
-    { n:"Peri Peri Fries", d:"Skin-on fries dusted with peri peri seasoning, with garlic mayo.", p:130, v:1, i:1583884, e:"🍟", t:"Spicy" },
-    { n:"Grilled Cheese Sandwich", d:"Toasted sourdough, three cheeses and a swipe of green chutney.", p:150, v:1, i:1603901, e:"🥪" },
-    { n:"Chicken Katsu Sando", d:"Fluffy milk bread, crumbed chicken, tonkatsu sauce and cabbage.", p:229, v:0, i:1633578, e:"🥪", t:"New" }
+  { id:"momos", title:"Momos", icon:"🥟", items:[
+    { n:"Veg Momos", d:"Steamed veg dumplings with spicy chutney.", p:80, i:33384415, e:"🥟" },
+    { n:"Paneer Momos", d:"Steamed dumplings stuffed with paneer.", p:90, i:28445589, e:"🥟" },
+    { n:"Fried Momos", d:"Crispy fried momos with chutney.", p:90, i:28445587, e:"🥟" }
   ]},
-  { id:"dessert", title:"Sweet Endings", sub:"Little treats, big smiles", icon:"🍰", items:[
-    { n:"Matcha Cheesecake", d:"Creamy baked cheesecake with a matcha swirl and biscuit base.", p:210, v:1, i:1126728, e:"🍰", t:"Chef's Pick" },
-    { n:"Dorayaki", d:"Fluffy honey pancakes sandwiching sweet red bean paste.", p:140, v:1, i:376464, e:"🥞" },
-    { n:"Mochi Trio", d:"Soft rice cakes in mango, strawberry and green tea flavours.", p:180, v:1, i:5945755, e:"🍡", t:"New" },
-    { n:"Fudgy Brownie", d:"Warm chocolate brownie with a scoop of vanilla ice cream.", p:160, v:1, i:45202, e:"🍫", t:"Bestseller" },
-    { n:"Mango Pudding", d:"Silky mango pudding served chilled with fresh fruit.", p:130, v:1, i:1126359, e:"🥭" }
+  { id:"sandwich", title:"Sandwich", icon:"🥪", items:[
+    { n:"Chili Garlic Toast", d:"Crisp toast with chilli and garlic.", p:50, i:10067617, e:"🍞" },
+    { n:"Cheese Sandwich", d:"Toasted sandwich with melted cheese.", p:60, i:30346820, e:"🥪" },
+    { n:"Veg Salad Sandwich", d:"Fresh vegetables between soft bread.", p:80, i:12540688, e:"🥪" },
+    { n:"Veg Cheese Grill Sandwich", d:"Grilled sandwich with veggies and cheese.", p:100, i:9240536, e:"🥪" },
+    { n:"Paneer Sandwich", d:"Grilled sandwich with a paneer filling.", p:120, i:36268517, e:"🥪" },
+    { n:"Veg Club Sandwich", d:"Layered club sandwich with veggies and cheese.", p:150, i:10681098, e:"🥪" }
+  ]},
+  { id:"rolls", title:"Rolls", icon:"🌯", items:[
+    { n:"Veg Roll", d:"Veg filling rolled in a soft wrap.", p:60, i:5713744, e:"🌯" },
+    { n:"Spinach Corn Roll", d:"Spinach and corn filling in a wrap.", p:70, i:36268502, e:"🌯" },
+    { n:"Tandoori Paneer Roll", d:"Tandoori paneer rolled with onions and sauce.", p:80, i:29173093, e:"🌯" },
+    { n:"Paneer Deluxe Roll", d:"Paneer roll with veggies and sauces.", p:80, i:11136408, e:"🌯" }
+  ]},
+  { id:"pasta", title:"Pasta", icon:"🍝", items:[
+    { n:"Red Cheese Pasta", d:"Pasta in tangy red sauce with cheese.", p:100, i:5419336, e:"🍝" },
+    { n:"White Cheese Pasta", d:"Pasta in creamy white sauce with cheese.", p:100, i:5639532, e:"🍝" },
+    { n:"Masala Pasta", d:"Indian-style spicy masala pasta.", p:100, i:28459093, e:"🍝" }
+  ]},
+  { id:"fries", title:"Fries", icon:"🍟", items:[
+    { n:"Regular Fries", d:"Crispy golden fries.", p:60, i:39851023, e:"🍟" },
+    { n:"Peri Peri Fries", d:"Fries tossed in peri peri seasoning.", p:80, i:11062003, e:"🍟" },
+    { n:"Cheese Fries", d:"Fries topped with cheese.", p:80, i:7594963, e:"🧀" }
+  ]},
+  { id:"bites", title:"Quick Bites", icon:"🧀", items:[
+    { n:"Cheese Ball", d:"Crispy fried balls with a cheesy centre.", p:80, i:34692573, e:"🧀" },
+    { n:"Potato Cheese Shot", d:"Crispy potato and cheese bites.", p:80, i:39034210, e:"🥔" },
+    { n:"Veg Finger Chips", d:"Crispy veg finger chips.", p:80, i:29150162, e:"🍟" },
+    { n:"Garlic Pops", d:"Crunchy garlic flavoured bites.", p:80, i:1251206, e:"🧄" }
+  ]},
+  { id:"maggie", title:"Maggie", icon:"🍜", items:[
+    { n:"Masala Maggie", d:"Maggie noodles in classic masala.", p:40, i:8746207, e:"🍜" },
+    { n:"Butter Masala Maggie", d:"Masala Maggie finished with butter.", p:50, i:31109619, e:"🍜" },
+    { n:"Vegetable Maggie", d:"Maggie noodles loaded with vegetables.", p:60, i:14457500, e:"🍜" }
+  ]},
+  { id:"shots", title:"Buzz Shots", icon:"🧃", items:[
+    { n:"Jamun Shots", d:"Chilled jamun shot.", p:40, i:12987518, e:"🫐" },
+    { n:"Guava Shots", d:"Chilled guava shot.", p:40, i:33865733, e:"🍈" }
+  ]},
+  { id:"mojito", title:"Mojito", icon:"🍹", items:[
+    { n:"Mint Mojito", d:"Cooling mint and lime mojito.", p:80, i:33129959, e:"🍃" },
+    { n:"Blueberry Mojito", d:"Fruity blueberry mojito with mint.", p:80, i:5817610, e:"🫐" }
+  ]},
+  { id:"desserts", title:"Desserts", icon:"🍫", items:[
+    { n:"Walnut Brownie", d:"Chocolate brownie with walnuts.", p:80, i:33813613, e:"🍫" },
+    { n:"Choco Lava Cake", d:"Warm cake with a molten chocolate centre.", p:90, i:36183209, e:"🍰" }
   ]}
 ];
 
@@ -462,7 +481,7 @@ const px = (id, w, h) =>
 const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const tagClass = t => ({"Chef's Pick":"pick","New":"new","Spicy":"hot"}[t] || "");
 
-const state = { q:"", veg:false };
+const state = { q:"" };
 const menuEl = $('#menu'), chipsEl = $('#chips');
 
 /* ---- header / footer details ---- */
@@ -481,7 +500,7 @@ function cardHTML(it){
   <button class="card" data-id="${it.uid}" aria-label="${esc(it.n)}, ${it.p} rupees">
     <div class="info">
       <div>
-        <div class="name-row"><i class="vdot ${it.v?'':'nv'}" title="${it.v?'Vegetarian':'Non-vegetarian'}"></i><span class="name">${esc(it.n)}</span></div>
+        <div class="name-row"><span class="name">${esc(it.n)}</span></div>
         <p class="desc">${esc(it.d)}</p>
       </div>
       <div class="bottom"><span class="price"><small>₹</small>${it.p}</span>${tag}</div>
@@ -498,14 +517,13 @@ function render(){
   chipsEl.innerHTML = "";
   MENU.forEach(cat => {
     const items = cat.items.filter(it =>
-      (!state.veg || it.v) &&
       (!q || (it.n + " " + it.d + " " + cat.title + " " + (it.t||"")).toLowerCase().includes(q)));
     if(!items.length) return;
     total += items.length;
     html += `
     <section class="section" id="sec-${cat.id}" data-cat="${cat.id}">
       <div class="section-head">
-        <div><h2>${cat.icon} ${esc(cat.title)}</h2><p>${esc(cat.sub)}</p></div>
+        <div><h2>${cat.icon} ${esc(cat.title)}</h2></div>
         <span class="count">${items.length} item${items.length>1?'s':''}</span>
       </div>
       <div class="grid">${items.map(cardHTML).join("")}</div>
@@ -587,8 +605,8 @@ chipsEl.addEventListener('click', e => {
 });
 $('#top').addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
 
-/* ---- search + veg filter ---- */
-const qEl = $('#q'), clearEl = $('#clear'), vegEl = $('#veg');
+/* ---- search ---- */
+const qEl = $('#q'), clearEl = $('#clear');
 let timer;
 qEl.addEventListener('input', () => {
   clearEl.classList.toggle('show', qEl.value.length > 0);
@@ -596,11 +614,6 @@ qEl.addEventListener('input', () => {
   timer = setTimeout(() => { state.q = qEl.value; render(); }, 160);
 });
 clearEl.addEventListener('click', () => { qEl.value = ""; state.q = ""; clearEl.classList.remove('show'); render(); qEl.focus(); });
-vegEl.addEventListener('click', () => {
-  state.veg = !state.veg;
-  vegEl.setAttribute('aria-pressed', state.veg);
-  render();
-});
 
 /* ---- detail sheet ---- */
 const sheet = $('#sheet'), overlay = $('#overlay');
@@ -610,7 +623,6 @@ function openSheet(it){
   $('#s-name').textContent = it.n;
   $('#s-desc').textContent = it.d;
   $('#s-price').textContent = "₹" + it.p;
-  const sv = $('#s-veg'); sv.className = 'vdot ' + (it.v ? '' : 'nv');
   $('#s-tag').innerHTML = it.t ? `<span class="tag ${tagClass(it.t)}">${esc(it.t)}</span>` : "";
   const box = $('#s-img');
   box.innerHTML = "";
