@@ -2,1766 +2,257 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Freedom Studio — We Build Brands That Grow.</title>
-<link rel="icon" type="image/png" href="logo.png">
-<meta name="description" content="Freedom Studio is a premium digital agency offering Meta Ads, Website Design, Graphic Design, Branding & Performance Marketing. Book a free strategy call today.">
-<meta name="keywords" content="digital agency india, meta ads, facebook ads, website design, brand identity, performance marketing, freedom studio">
-<meta property="og:title" content="Freedom Studio — We Build Brands That Grow.">
-<meta property="og:description" content="Premium digital agency for local businesses, restaurants, real estate, startups & e-commerce brands.">
-<meta property="og:type" content="website">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Digital Menu Card for Your Restaurant</title>
+<meta name="description" content="Get a beautiful digital menu card with QR code for your restaurant or cafe. Message us on WhatsApp to get started.">
 <style>
-:root {
-  --blue: #00A6FF;
-  --blue2: #007BFF;
-  --navy: #050B1E;
-  --bg: #030712;
-  --white: #FFFFFF;
-  --muted: #94A3B8;
-  --surface: #0A1628;
-  --surface2: #0D1F3C;
-  --border: rgba(0,166,255,0.15);
-  --border2: rgba(255,255,255,0.08);
-  --glow: 0 0 40px rgba(0,166,255,0.3);
-  --glow2: 0 0 80px rgba(0,166,255,0.15);
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;font-size:16px;overflow-x:hidden}
-body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden;line-height:1.6;max-width:100vw}
-::selection{background:rgba(0,166,255,0.3);color:#fff}
-::-webkit-scrollbar{width:4px}
-::-webkit-scrollbar-track{background:var(--bg)}
-::-webkit-scrollbar-thumb{background:var(--blue);border-radius:2px}
+  :root{
+    --bg:#fffaf3;
+    --ink:#1f1a14;
+    --muted:#6b6258;
+    --brand:#e8571f;
+    --brand-dark:#c9440f;
+    --card:#ffffff;
+    --line:#f0e6d8;
+    --wa:#25d366;
+    --wa-dark:#1ebe5a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
 
-/* CURSOR */
-#cursor{position:fixed;width:12px;height:12px;background:var(--blue);border-radius:50%;pointer-events:none;z-index:9999;mix-blend-mode:difference;transition:transform 0.1s;transform:translate(-50%,-50%)}
-#cursor-trail{position:fixed;width:32px;height:32px;border:1px solid rgba(0,166,255,0.5);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:left 0.12s,top 0.12s,transform 0.2s}
+  /* Header */
+  header{padding:18px 0}
+  header .wrap{display:flex;align-items:center;justify-content:space-between}
+  .logo{font-weight:800;font-size:1.1rem;letter-spacing:-.01em}
+  .logo span{color:var(--brand)}
 
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:background 0.3s}
-nav.scrolled{background:rgba(3,7,18,0.95)}
-.nav-logo{font-family:'Space Grotesk',sans-serif;font-size:1.15rem;font-weight:700;color:#fff;text-decoration:none;display:flex;align-items:center;gap:0.5rem}
-.logo-mark{width:34px;height:34px;border-radius:9px;object-fit:contain;flex-shrink:0;filter:drop-shadow(0 0 8px rgba(0,166,255,0.6))}
-.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
-.nav-links a{color:var(--muted);text-decoration:none;font-size:0.875rem;font-weight:500;transition:color 0.2s;position:relative}
-.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--blue);transition:width 0.3s}
-.nav-links a:hover{color:#fff}
-.nav-links a:hover::after{width:100%}
-.nav-cta{background:var(--blue);color:#fff;padding:0.6rem 1.4rem;border-radius:50px;font-size:0.85rem;font-weight:600;text-decoration:none;transition:all 0.3s;box-shadow:0 0 20px rgba(0,166,255,0.4)}
-.nav-cta:hover{background:#007BFF;box-shadow:0 0 30px rgba(0,166,255,0.6);transform:translateY(-1px)}
-.nav-links a.nav-cta,.nav-links a.nav-cta:hover{color:#fff}
-.nav-links a.nav-cta::after{display:none}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
-.hamburger span{width:24px;height:2px;background:#fff;border-radius:2px;transition:all 0.3s}
-.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(3,7,18,0.98);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:2rem;backdrop-filter:blur(20px)}
-.mobile-menu.open{display:flex}
-.mobile-menu a{color:#fff;text-decoration:none;font-size:1.5rem;font-weight:600;transition:color 0.2s}
-.mobile-menu a:hover{color:var(--blue)}
-.mobile-close{position:absolute;top:1.5rem;right:2rem;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer}
+  /* Buttons */
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    background:var(--wa);color:#fff;text-decoration:none;
+    font-weight:700;font-size:1rem;padding:14px 24px;border-radius:999px;
+    box-shadow:0 8px 20px rgba(37,211,102,.35);
+    transition:transform .15s ease,background .15s ease;
+  }
+  .btn:hover{background:var(--wa-dark);transform:translateY(-2px)}
+  .btn svg{width:22px;height:22px;fill:#fff;flex:none}
+  .btn.small{padding:10px 18px;font-size:.9rem;box-shadow:none}
 
-/* PAGE SYSTEM */
-.page{display:none;min-height:100vh}
-.page.active{display:block}
+  /* Hero */
+  .hero{padding:36px 0 56px}
+  .hero .wrap{display:grid;gap:40px;align-items:center}
+  .tag{
+    display:inline-block;background:#ffe9dd;color:var(--brand-dark);
+    font-weight:700;font-size:.8rem;padding:6px 12px;border-radius:999px;margin-bottom:16px;
+  }
+  h1{font-size:clamp(2rem,6vw,3.2rem);line-height:1.1;letter-spacing:-.02em;margin-bottom:16px}
+  h1 em{font-style:normal;color:var(--brand)}
+  .hero p.lead{color:var(--muted);font-size:1.1rem;max-width:520px;margin-bottom:26px}
+  .note{margin-top:14px;font-size:.88rem;color:var(--muted)}
 
-/* HERO */
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:6rem 2rem 4rem;background:#000}
-.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;background:#000}
-.hero-video-mobile{display:none}
-.hero-video-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(3,7,18,0.55) 0%,rgba(3,7,18,0.65) 45%,rgba(3,7,18,0.92) 100%)}
-.hero-grid{position:absolute;inset:0;z-index:1;background-image:linear-gradient(rgba(0,166,255,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(0,166,255,0.05) 1px,transparent 1px);background-size:80px 80px;pointer-events:none}
-.hero-content{position:relative;z-index:2;text-align:center;max-width:900px;margin:0 auto}
-.hero-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(0,166,255,0.1);border:1px solid rgba(0,166,255,0.3);border-radius:50px;padding:0.4rem 1rem;font-size:0.8rem;color:var(--blue);margin-bottom:2rem;font-weight:500}
-.hero-badge::before{content:'';width:6px;height:6px;background:var(--blue);border-radius:50%;animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(1.3)}}
-.hero h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(3rem,8vw,7rem);font-weight:800;line-height:1;letter-spacing:-0.03em;margin-bottom:1.5rem}
-.hero h1 .line1{display:block;color:#fff}
-.hero h1 .line2{display:block;background:linear-gradient(135deg,#00A6FF,#007BFF,#00D4FF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero-sub{font-size:1.15rem;color:var(--muted);max-width:600px;margin:0 auto 2.5rem;font-weight:400}
-.hero-actions{display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap}
-.btn-primary{display:inline-flex;align-items:center;gap:0.5rem;background:var(--blue);color:#fff;padding:0.9rem 2rem;border-radius:50px;font-size:0.95rem;font-weight:600;text-decoration:none;transition:all 0.3s;box-shadow:0 0 30px rgba(0,166,255,0.4)}
-.btn-primary:hover{background:#007BFF;box-shadow:0 0 50px rgba(0,166,255,0.6);transform:translateY(-2px)}
-.btn-secondary{display:inline-flex;align-items:center;gap:0.5rem;background:transparent;color:#fff;padding:0.9rem 2rem;border-radius:50px;font-size:0.95rem;font-weight:600;text-decoration:none;border:1px solid rgba(255,255,255,0.2);transition:all 0.3s}
-.btn-secondary:hover{border-color:var(--blue);color:var(--blue);background:rgba(0,166,255,0.05)}
-.hero-stats{display:flex;align-items:center;justify-content:center;gap:3rem;margin-top:4rem;flex-wrap:wrap}
-.hero-stat .num{font-family:'Space Grotesk',sans-serif;font-size:2.5rem;font-weight:800;color:#fff;line-height:1}
-.hero-stat .num span{color:var(--blue)}
-.hero-stat .label{font-size:0.8rem;color:var(--muted);margin-top:0.25rem}
-.hero-stat-divider{width:1px;height:40px;background:var(--border2)}
-.scroll-indicator{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:0.5rem;color:var(--muted);font-size:0.75rem;animation:bounce 2s infinite;z-index:2}
-@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
-.scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,var(--blue),transparent)}
+  /* Phone mockup */
+  .phone{
+    width:240px;margin:0 auto;background:#1f1a14;border-radius:34px;padding:10px;
+    box-shadow:0 30px 60px rgba(31,26,20,.25);transform:rotate(3deg);
+  }
+  .screen{background:#fff;border-radius:26px;overflow:hidden;min-height:400px}
+  .screen .top{background:var(--brand);color:#fff;padding:22px 16px 16px;text-align:center}
+  .screen .top b{display:block;font-size:1.05rem}
+  .screen .top small{opacity:.85}
+  .chips{display:flex;gap:6px;padding:12px 12px 4px;overflow:hidden}
+  .chips span{font-size:.7rem;padding:5px 10px;border-radius:999px;background:#f5efe6;white-space:nowrap}
+  .chips span:first-child{background:var(--ink);color:#fff}
+  .item{display:flex;justify-content:space-between;gap:10px;padding:12px 14px;border-bottom:1px solid var(--line);font-size:.82rem}
+  .item small{display:block;color:var(--muted);font-size:.7rem}
+  .item strong{color:var(--brand-dark);white-space:nowrap}
 
-@media(max-width:768px){
-  .hero-video-desktop{display:none !important}
-  .hero-video-mobile{display:block !important}
-}
+  /* Sections */
+  section{padding:56px 0}
+  h2{font-size:clamp(1.5rem,4vw,2.1rem);letter-spacing:-.01em;margin-bottom:10px;text-align:center}
+  .sub{color:var(--muted);text-align:center;max-width:560px;margin:0 auto 34px}
 
-/* SECTIONS */
-section{padding:6rem 2rem}
-.section-eyebrow{display:inline-flex;align-items:center;gap:0.5rem;color:var(--blue);font-size:0.8rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1rem}
-.section-eyebrow::before{content:'';width:20px;height:1px;background:var(--blue)}
-.section-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:700;line-height:1.1;margin-bottom:1.5rem}
-.section-sub{font-size:1rem;color:var(--muted);max-width:560px;line-height:1.7}
-.container{max-width:1200px;margin:0 auto;width:100%;padding:0 1rem}
-.text-center{text-align:center}
-.text-center .section-sub{margin:0 auto}
+  .grid{display:grid;gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
+  .card .ico{font-size:1.7rem;margin-bottom:8px}
+  .card h3{font-size:1.05rem;margin-bottom:4px}
+  .card p{color:var(--muted);font-size:.95rem}
 
-/* TRUST */
-.trust{padding:3rem 2rem;border-top:1px solid var(--border2);border-bottom:1px solid var(--border2)}
-.trust-label{text-align:center;color:var(--muted);font-size:0.8rem;margin-bottom:2rem;letter-spacing:0.05em}
-.trust-logos{display:flex;align-items:center;justify-content:center;gap:3rem;flex-wrap:wrap;opacity:0.5}
-.trust-logo{font-family:'Space Grotesk',sans-serif;font-size:1rem;font-weight:700;color:var(--muted);letter-spacing:-0.02em}
+  .steps .card{position:relative;padding-top:34px}
+  .num{
+    position:absolute;top:-16px;left:20px;width:36px;height:36px;border-radius:50%;
+    background:var(--brand);color:#fff;font-weight:800;display:grid;place-items:center;
+  }
 
-/* SERVICES */
-.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:4rem}
-.service-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:2rem;transition:all 0.4s;position:relative;overflow:hidden;cursor:pointer}
-.service-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,166,255,0.05),transparent);opacity:0;transition:opacity 0.4s}
-.service-card:hover{border-color:rgba(0,166,255,0.4);transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,166,255,0.15)}
-.service-card:hover::before{opacity:1}
-.service-icon{width:48px;height:48px;border-radius:12px;overflow:hidden;margin-bottom:1.5rem;position:relative;z-index:1}
-.service-icon img{width:100%;height:100%;object-fit:cover;display:block}
-.service-card h3{font-family:'Space Grotesk',sans-serif;font-size:1.15rem;font-weight:600;margin-bottom:0.75rem}
-.service-card p{font-size:0.875rem;color:var(--muted);line-height:1.7}
-.service-tag{display:inline-block;background:rgba(0,166,255,0.1);color:var(--blue);padding:0.25rem 0.75rem;border-radius:50px;font-size:0.7rem;font-weight:600;margin-top:1rem}
+  /* Samples */
+  .sample{
+    display:block;text-decoration:none;color:inherit;background:var(--card);
+    border:1px solid var(--line);border-radius:18px;overflow:hidden;
+    transition:transform .15s ease,box-shadow .15s ease;
+  }
+  .sample:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(31,26,20,.12)}
+  .sample .thumb{height:120px;display:grid;place-items:center;font-size:2.6rem}
+  .sample.s1 .thumb{background:linear-gradient(135deg,#f7e3c8,#e9c79b)}
+  .sample.s2 .thumb{background:linear-gradient(135deg,#f9d9cf,#e8a48f)}
+  .sample.s3 .thumb{background:linear-gradient(135deg,#ffe3b3,#f5b25c)}
+  .sample .body{padding:18px 20px 20px}
+  .sample .kind{font-size:.75rem;font-weight:700;color:var(--brand-dark);text-transform:uppercase;letter-spacing:.05em}
+  .sample h3{font-size:1.15rem;margin:4px 0 10px}
+  .sample .view{font-weight:700;font-size:.92rem;color:var(--brand)}
 
-/* PORTFOLIO */
-.portfolio-filter{display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;margin-bottom:3rem;justify-content:center}
-.filter-btn{background:transparent;border:1px solid var(--border2);color:var(--muted);padding:0.5rem 1.25rem;border-radius:50px;font-size:0.85rem;cursor:pointer;transition:all 0.3s;font-family:'Inter',sans-serif}
-.filter-btn.active,.filter-btn:hover{background:var(--blue);border-color:var(--blue);color:#fff}
-.portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem}
-.portfolio-card{background:var(--surface);border:1px solid var(--border2);border-radius:16px;overflow:hidden;transition:all 0.4s;cursor:pointer;position:relative}
-.portfolio-card:hover{border-color:rgba(0,166,255,0.4);transform:translateY(-6px);box-shadow:0 30px 80px rgba(0,0,0,0.5)}
-.portfolio-thumb{aspect-ratio:16/9;background:var(--surface2);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.portfolio-thumb-inner{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:2rem;position:relative}
-.pf-icon-box{width:60px;height:60px;border-radius:14px;overflow:hidden;margin:0 auto 0.6rem;border:1px solid rgba(255,255,255,0.15);box-shadow:0 8px 24px rgba(0,0,0,0.4)}
-.pf-icon-box img{width:100%;height:100%;object-fit:cover;display:block}
-.portfolio-overlay{position:absolute;inset:0;background:rgba(0,166,255,0.1);opacity:0;transition:opacity 0.3s;display:flex;align-items:center;justify-content:center}
-.portfolio-card:hover .portfolio-overlay{opacity:1}
-.portfolio-info{padding:1.5rem}
-.portfolio-info h3{font-family:'Space Grotesk',sans-serif;font-size:1rem;font-weight:600;margin-bottom:0.5rem}
-.portfolio-info p{font-size:0.8rem;color:var(--muted)}
-.portfolio-tag{display:inline-block;background:rgba(0,166,255,0.1);color:var(--blue);padding:0.2rem 0.6rem;border-radius:50px;font-size:0.7rem;margin-top:0.75rem;font-weight:600}
-.portfolio-link{position:absolute;top:1rem;right:1rem;width:36px;height:36px;background:rgba(0,166,255,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--blue);text-decoration:none;opacity:0;transition:opacity 0.3s}
-.portfolio-card:hover .portfolio-link{opacity:1}
-.food-icon-cell{border-radius:6px;aspect-ratio:1;overflow:hidden}
-.food-icon-cell img{width:100%;height:100%;object-fit:cover;display:block}
+  /* CTA */
+  .cta{
+    background:var(--ink);color:#fff;border-radius:26px;padding:44px 24px;text-align:center;
+  }
+  .cta h2{color:#fff}
+  .cta p{color:#cfc6ba;margin:0 auto 24px;max-width:480px}
+  .cta .phone-num{display:block;margin-top:16px;color:#cfc6ba;font-size:.95rem}
+  .cta .phone-num a{color:#fff;font-weight:700;text-decoration:none}
 
-/* PROCESS */
-.process-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;margin-top:4rem;position:relative}
-.process-steps::before{content:'';position:absolute;top:30px;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--border),var(--border),transparent)}
-.process-step{text-align:center;padding:2rem 1.5rem}
-.process-num{width:60px;height:60px;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;background:var(--surface);font-family:'Space Grotesk',sans-serif;font-size:0.9rem;font-weight:700;color:var(--blue);position:relative;z-index:1}
-.process-step h3{font-family:'Space Grotesk',sans-serif;font-size:0.95rem;font-weight:600;margin-bottom:0.5rem}
-.process-step p{font-size:0.8rem;color:var(--muted);line-height:1.6}
+  footer{text-align:center;color:var(--muted);font-size:.85rem;padding:30px 0 100px}
 
-/* TESTIMONIALS */
-.testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-top:4rem}
-.testimonial-card{background:var(--surface);border:1px solid var(--border2);border-radius:16px;padding:2rem;position:relative;transition:all 0.3s}
-.testimonial-card:hover{border-color:rgba(0,166,255,0.3)}
-.stars{color:var(--blue);font-size:0.9rem;margin-bottom:1rem}
-.testimonial-text{font-size:0.9rem;color:var(--muted);line-height:1.8;margin-bottom:1.5rem;font-style:italic}
-.testimonial-author{display:flex;align-items:center;gap:0.75rem}
-.author-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--blue2));display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.9rem;color:#fff}
-.author-name{font-size:0.9rem;font-weight:600}
-.author-role{font-size:0.75rem;color:var(--muted)}
+  /* Floating WhatsApp */
+  .float{
+    position:fixed;right:18px;bottom:18px;z-index:50;width:60px;height:60px;border-radius:50%;
+    background:var(--wa);display:grid;place-items:center;
+    box-shadow:0 10px 26px rgba(37,211,102,.5);transition:transform .15s ease;
+  }
+  .float:hover{transform:scale(1.08)}
+  .float svg{width:32px;height:32px;fill:#fff}
 
-/* FAQ */
-.faq-list{max-width:700px;margin:4rem auto 0;display:flex;flex-direction:column;gap:1rem}
-.faq-item{background:var(--surface);border:1px solid var(--border2);border-radius:12px;overflow:hidden;transition:border-color 0.3s}
-.faq-item.open{border-color:rgba(0,166,255,0.3)}
-.faq-q{display:flex;align-items:center;justify-content:space-between;padding:1.25rem 1.5rem;cursor:pointer;font-size:0.95rem;font-weight:500}
-.faq-icon{color:var(--blue);transition:transform 0.3s;font-size:1.2rem;flex-shrink:0}
-.faq-item.open .faq-icon{transform:rotate(45deg)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s ease;font-size:0.875rem;color:var(--muted);line-height:1.8;padding:0 1.5rem}
-.faq-item.open .faq-a{max-height:200px;padding:0 1.5rem 1.25rem}
-
-/* CTA SECTION */
-.cta-section{background:linear-gradient(135deg,rgba(0,166,255,0.08),rgba(0,123,255,0.05));border:1px solid var(--border);border-radius:24px;padding:4rem;text-align:center;margin:2rem 0}
-.cta-section h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:700;margin-bottom:1rem}
-.cta-section p{color:var(--muted);margin-bottom:2rem;font-size:1rem}
-.cta-actions{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap}
-
-/* PRICING */
-.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-top:4rem;align-items:start}
-.pricing-card{background:var(--surface);border:1px solid var(--border2);border-radius:20px;padding:2.5rem;position:relative;transition:all 0.4s}
-.pricing-card.featured{border-color:var(--blue);background:linear-gradient(135deg,rgba(0,166,255,0.08),var(--surface));box-shadow:0 0 60px rgba(0,166,255,0.15)}
-.pricing-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--blue);color:#fff;padding:0.25rem 1rem;border-radius:50px;font-size:0.75rem;font-weight:600;white-space:nowrap}
-.pricing-tier{font-size:0.8rem;color:var(--blue);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.5rem}
-.pricing-name{font-family:'Space Grotesk',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:1rem}
-.pricing-price{margin-bottom:2rem}
-.pricing-currency{font-size:1.2rem;font-weight:600;color:var(--blue);vertical-align:top;line-height:1.8}
-.pricing-amount{font-family:'Space Grotesk',sans-serif;font-size:3rem;font-weight:800;line-height:1}
-.pricing-period{font-size:0.85rem;color:var(--muted)}
-.pricing-features{list-style:none;display:flex;flex-direction:column;gap:0.75rem;margin-bottom:2rem}
-.pricing-features li{display:flex;align-items:center;gap:0.75rem;font-size:0.875rem;color:var(--muted)}
-.pricing-features li::before{content:'✓';color:var(--blue);font-weight:700;flex-shrink:0}
-.pricing-example{margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border2);font-size:0.75rem;color:var(--muted)}
-.pricing-example a{color:var(--blue);text-decoration:none}
-.pricing-example a:hover{text-decoration:underline}
-.addon-icon{width:40px;height:40px;border-radius:10px;background:rgba(0,166,255,0.1);display:flex;align-items:center;justify-content:center;margin-bottom:0.75rem;color:var(--blue)}
-.addon-icon svg{width:20px;height:20px}
-
-/* CONTACT FORM */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-top:4rem}
-.contact-info h3{font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:700;margin-bottom:1rem}
-.contact-info p{color:var(--muted);font-size:0.9rem;line-height:1.8;margin-bottom:2rem}
-.contact-details{display:flex;flex-direction:column;gap:1rem}
-.contact-detail{display:flex;align-items:center;gap:0.75rem;color:var(--muted);font-size:0.875rem}
-.contact-detail-icon{width:36px;height:36px;background:rgba(0,166,255,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--blue)}
-.contact-detail-icon svg{width:18px;height:18px}
-.form-group{margin-bottom:1.25rem}
-.form-label{display:block;font-size:0.8rem;color:var(--muted);margin-bottom:0.5rem;font-weight:500;letter-spacing:0.02em}
-.form-input,.form-select,.form-textarea{width:100%;background:var(--surface);border:1px solid var(--border2);border-radius:10px;padding:0.85rem 1rem;color:#fff;font-size:0.9rem;font-family:'Inter',sans-serif;transition:all 0.3s;outline:none}
-.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(0,166,255,0.1)}
-.form-input::placeholder,.form-textarea::placeholder{color:rgba(148,163,184,0.5)}
-.form-select{appearance:none;cursor:pointer}
-.form-select option{background:var(--surface)}
-.form-textarea{resize:vertical;min-height:120px}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.success-msg{display:none;background:rgba(0,166,255,0.1);border:1px solid rgba(0,166,255,0.3);border-radius:12px;padding:1.5rem;text-align:center;color:var(--blue);font-weight:500}
-
-/* ABOUT */
-.about-story{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-top:4rem}
-.about-visual{background:var(--surface);border:1px solid var(--border);border-radius:20px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.about-visual-inner{width:100%;height:100%;position:relative;z-index:1}
-.about-visual-inner img{width:100%;height:100%;object-fit:cover;display:block}
-.about-glow{position:absolute;width:200px;height:200px;background:rgba(0,166,255,0.1);border-radius:50%;filter:blur(60px);z-index:0}
-.timeline{margin-top:3rem;position:relative;padding-left:2rem}
-.timeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,var(--blue),transparent)}
-.timeline-item{position:relative;margin-bottom:2rem}
-.timeline-dot{position:absolute;left:-2.4rem;top:4px;width:12px;height:12px;background:var(--blue);border-radius:50%;box-shadow:0 0 10px var(--blue)}
-.timeline-year{font-size:0.75rem;color:var(--blue);font-weight:600;margin-bottom:0.25rem}
-.timeline-title{font-size:0.95rem;font-weight:600;margin-bottom:0.25rem}
-.timeline-desc{font-size:0.85rem;color:var(--muted);line-height:1.6}
-.values-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;margin-top:3rem}
-.value-card{background:var(--surface);border:1px solid var(--border2);border-radius:16px;padding:2rem;text-align:center;transition:all 0.3s}
-.value-card:hover{border-color:rgba(0,166,255,0.3);transform:translateY(-4px)}
-.value-icon{width:56px;height:56px;border-radius:14px;overflow:hidden;margin:0 auto 1rem;box-shadow:0 10px 24px rgba(0,166,255,0.15)}
-.value-icon img{width:100%;height:100%;object-fit:cover;display:block}
-.value-card h3{font-family:'Space Grotesk',sans-serif;font-size:1rem;font-weight:600;margin-bottom:0.5rem}
-.value-card p{font-size:0.8rem;color:var(--muted);line-height:1.6}
-
-/* SERVICES PAGE */
-.service-detail{background:var(--surface);border:1px solid var(--border2);border-radius:20px;padding:3rem;margin-bottom:2rem}
-.service-detail-header{display:flex;align-items:center;gap:1.5rem;margin-bottom:2rem}
-.service-detail-icon{width:64px;height:64px;border-radius:16px;overflow:hidden;flex-shrink:0}
-.service-detail-icon img{width:100%;height:100%;object-fit:cover;display:block}
-.service-detail h2{font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:700}
-.service-detail-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem}
-.service-detail-col h4{font-size:0.75rem;color:var(--blue);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:1rem}
-.service-detail-col ul{list-style:none;display:flex;flex-direction:column;gap:0.5rem}
-.service-detail-col li{font-size:0.85rem;color:var(--muted);display:flex;align-items:center;gap:0.5rem}
-.service-detail-col li::before{content:'→';color:var(--blue)}
-
-/* FLOATING WHATSAPP */
-.whatsapp-btn{position:fixed;bottom:6rem;right:2rem;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:500;box-shadow:0 4px 20px rgba(37,211,102,0.4);text-decoration:none;animation:float 3s ease-in-out infinite;cursor:pointer;border:none}
-.whatsapp-btn:hover{box-shadow:0 6px 30px rgba(37,211,102,0.6)}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
-.sticky-cta{position:fixed;bottom:2rem;right:2rem;background:var(--blue);color:#fff !important;padding:0.75rem 1.5rem;border-radius:50px;font-size:0.85rem;font-weight:700;text-decoration:none;z-index:600;box-shadow:0 0 30px rgba(0,166,255,0.5),0 2px 8px rgba(0,0,0,0.4);display:flex;align-items:center;gap:0.5rem;animation:slideUp 0.5s ease 1s both;white-space:nowrap}
-@keyframes slideUp{from{transform:translateY(20px);opacity:0}to{transform:translateY(0);opacity:1}}
-.sticky-cta:hover{background:#007BFF;box-shadow:0 0 40px rgba(0,166,255,0.6)}
-
-/* GLOW EFFECTS */
-.glow-dot{width:300px;height:300px;background:rgba(0,166,255,0.06);border-radius:50%;filter:blur(80px);position:absolute;pointer-events:none}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-  nav{padding:1rem}
-  .nav-links{display:none}
-  .hamburger{display:flex}
-  .hero h1{font-size:2.8rem}
-  .hero-stats{gap:1.5rem}
-  .hero-stat-divider{display:none}
-  .contact-grid{grid-template-columns:1fr}
-  .about-story{grid-template-columns:1fr}
-  .about-visual{display:none}
-  .form-row{grid-template-columns:1fr}
-  section{padding:4rem 1.5rem}
-  .cta-section{padding:2.5rem 1.5rem}
-  .process-steps::before{display:none}
-  .service-detail{padding:1.5rem}
-  .service-detail-header{flex-direction:column;align-items:flex-start}
-  .pricing-grid{grid-template-columns:1fr}
-  .services-grid{grid-template-columns:1fr}
-  .values-grid{grid-template-columns:1fr 1fr}
-  .testimonials-grid{grid-template-columns:1fr}
-  .trust-logos{gap:1.5rem}
-  .portfolio-grid{grid-template-columns:1fr}
-  .sticky-cta{bottom:1rem;right:1rem;padding:0.6rem 1.1rem;font-size:0.8rem}
-  .whatsapp-btn{bottom:4.5rem;right:1rem}
-}
-@media(max-width:480px){
-  .hero h1{font-size:2.2rem}
-  .hero-actions{flex-direction:column;align-items:stretch}
-  .btn-primary,.btn-secondary{justify-content:center}
-}
-
-/* ANIMATIONS */
-.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.7s,transform 0.7s}
-.reveal.visible{opacity:1;transform:none}
-.reveal-delay-1{transition-delay:0.1s}
-.reveal-delay-2{transition-delay:0.2s}
-.reveal-delay-3{transition-delay:0.3s}
-.reveal-delay-4{transition-delay:0.4s}
+  @media(min-width:760px){
+    .hero .wrap{grid-template-columns:1.2fr .8fr}
+    .grid.three{grid-template-columns:repeat(3,1fr)}
+    .grid.two{grid-template-columns:repeat(2,1fr)}
+    .cta{padding:60px 40px}
+  }
 </style>
 </head>
 <body>
 
-<!-- Custom Cursor -->
-<div id="cursor"></div>
-<div id="cursor-trail"></div>
+<!-- WhatsApp icon (reused) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 32 32">
+    <path d="M16.003 3C9.375 3 4 8.373 4 15c0 2.385.697 4.607 1.894 6.48L4 29l7.7-1.857A11.94 11.94 0 0 0 16.003 27C22.63 27 28 21.627 28 15S22.63 3 16.003 3zm0 21.8c-1.86 0-3.6-.5-5.1-1.37l-.37-.22-4.57 1.1 1.14-4.45-.24-.38A9.76 9.76 0 0 1 6.2 15c0-5.42 4.4-9.8 9.8-9.8 5.4 0 9.8 4.38 9.8 9.8s-4.4 9.8-9.8 9.8zm5.4-7.34c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35z"/>
+  </symbol>
+</svg>
 
-<!-- Navigation -->
-<nav id="navbar">
-  <a class="nav-logo" href="#" onclick="showPage('home')">
-    <img class="logo-mark" src="logo.png" alt="Freedom Studio">
-    Freedom Studio
-  </a>
-  <ul class="nav-links">
-    <li><a href="#" onclick="showPage('home')">Home</a></li>
-    <li><a href="#" onclick="showPage('services')">Services</a></li>
-    <li><a href="#" onclick="showPage('portfolio')">Portfolio</a></li>
-    <li><a href="#" onclick="showPage('pricing')">Pricing</a></li>
-    <li><a href="#" onclick="showPage('about')">About</a></li>
-    <li><a href="#" onclick="showPage('contact')" class="nav-cta">Book a Call →</a></li>
-  </ul>
-  <div class="hamburger" id="hamburger">
-    <span></span><span></span><span></span>
+<header>
+  <div class="wrap">
+    <div class="logo">Digital<span>Menu</span></div>
+    <a class="btn small" href="https://wa.me/918275872736?text=Hi%2C%20I%20want%20to%20make%20a%20digital%20menu%20card%20for%20my%20restaurant." target="_blank" rel="noopener">
+      <svg><use href="#wa"/></svg> Chat Now
+    </a>
   </div>
-</nav>
+</header>
 
-<!-- Mobile Menu -->
-<div class="mobile-menu" id="mobile-menu">
-  <button class="mobile-close" id="mobile-close">✕</button>
-  <a href="#" onclick="showPage('home');closeMobileMenu()">Home</a>
-  <a href="#" onclick="showPage('services');closeMobileMenu()">Services</a>
-  <a href="#" onclick="showPage('portfolio');closeMobileMenu()">Portfolio</a>
-  <a href="#" onclick="showPage('pricing');closeMobileMenu()">Pricing</a>
-  <a href="#" onclick="showPage('about');closeMobileMenu()">About</a>
-  <a href="#" onclick="showPage('contact');closeMobileMenu()" style="color:var(--blue)">Book a Call →</a>
-</div>
-
-<!-- ============================================= -->
-<!-- HOME PAGE -->
-<!-- ============================================= -->
-<div class="page active" id="page-home">
-
+<main>
   <!-- HERO -->
-  <section class="hero">
-    <!-- Desktop hero video -->
-    <video class="hero-video hero-video-desktop" autoplay muted loop playsinline preload="auto">
-      <source src="pc.mp4" type="video/mp4">
-    </video>
-    <!-- Mobile hero video -->
-    <video class="hero-video hero-video-mobile" autoplay muted loop playsinline preload="auto">
-      <source src="mobile.mp4" type="video/mp4">
-    </video>
-    <div class="hero-video-overlay"></div>
-    <div class="hero-grid"></div>
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <span class="tag">For Restaurants, Cafes &amp; Food Stalls</span>
+        <h1>Your menu, now just a <em>scan</em> away.</h1>
+        <p class="lead">We create a beautiful digital menu card with a QR code for your restaurant. No more printing, no more outdated prices. Update anytime.</p>
+        <a class="btn" href="https://wa.me/918275872736?text=Hi%2C%20I%20want%20to%20make%20a%20digital%20menu%20card%20for%20my%20restaurant." target="_blank" rel="noopener">
+          <svg><use href="#wa"/></svg> Message us on WhatsApp
+        </a>
+        <p class="note">Reply within a few hours &bull; Free demo before you decide</p>
+      </div>
 
-    <div class="hero-content">
-      <div class="hero-badge">
-        <span>✦</span> Premium Digital Agency · Nashik, India
-      </div>
-      <h1>
-        <span class="line1">We Build Brands</span>
-        <span class="line2">That Grow.</span>
-      </h1>
-      <p class="hero-sub">Meta Ads · Website Design · Brand Identity · Performance Marketing — crafted for businesses that refuse to be ordinary.</p>
-      <div class="hero-actions">
-        <a class="btn-primary" href="#" onclick="showPage('contact')">Book Free Strategy Call →</a>
-        <a class="btn-secondary" href="#" onclick="showPage('portfolio')">View Our Work</a>
-      </div>
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <div class="num">150<span>+</span></div>
-          <div class="label">Projects Delivered</div>
+      <div class="phone" aria-hidden="true">
+        <div class="screen">
+          <div class="top"><b>Your Restaurant</b><small>Scan &bull; Browse &bull; Order</small></div>
+          <div class="chips"><span>Starters</span><span>Main</span><span>Drinks</span><span>Desserts</span></div>
+          <div class="item"><div>Paneer Tikka<small>Smoky, served with mint chutney</small></div><strong>₹220</strong></div>
+          <div class="item"><div>Veg Biryani<small>Aromatic basmati, raita</small></div><strong>₹260</strong></div>
+          <div class="item"><div>Masala Chai<small>Fresh ginger &amp; cardamom</small></div><strong>₹40</strong></div>
+          <div class="item"><div>Gulab Jamun<small>Warm, 2 pieces</small></div><strong>₹80</strong></div>
         </div>
-        <div class="hero-stat-divider"></div>
-        <div class="hero-stat">
-          <div class="num">3×<span>+</span></div>
-          <div class="label">Avg. ROI Growth</div>
-        </div>
-        <div class="hero-stat-divider"></div>
-        <div class="hero-stat">
-          <div class="num">48<span>hr</span></div>
-          <div class="label">First Draft Delivery</div>
-        </div>
-        <div class="hero-stat-divider"></div>
-        <div class="hero-stat">
-          <div class="num">100<span>%</span></div>
-          <div class="label">Client Satisfaction</div>
-        </div>
-      </div>
-    </div>
-    <div class="scroll-indicator">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
-    </div>
-  </section>
-
-  <!-- TRUST -->
-  <div class="trust">
-    <div class="container">
-      <p class="trust-label">TRUSTED BY BRANDS ACROSS INDIA</p>
-      <div class="trust-logos">
-        <div class="trust-logo">Kumbh Snan</div>
-        <div class="trust-logo">Fashion Hood</div>
-        <div class="trust-logo">Local Bites</div>
-        <div class="trust-logo">RealtyPro</div>
-        <div class="trust-logo">StartupX</div>
-        <div class="trust-logo">Coach Arena</div>
       </div>
     </div>
   </div>
 
-  <!-- SERVICES OVERVIEW -->
+  <!-- BENEFITS -->
   <section>
-    <div class="container">
-      <div class="text-center reveal">
-        <div class="section-eyebrow">What We Do</div>
-        <h2 class="section-title">Services Built for <span style="color:var(--blue)">Results</span></h2>
-        <p class="section-sub">From paid ads that convert to brand identities that stand out — every service is built to move your business forward.</p>
-      </div>
-      <div class="services-grid">
-        <div class="service-card reveal reveal-delay-1">
-          <div class="service-icon"><img src="https://images.pexels.com/photos/3183126/pexels-photo-3183126.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Meta Ads"></div>
-          <h3>Meta & Facebook Ads</h3>
-          <p>Data-driven campaigns that reach your ideal customers and turn clicks into paying clients.</p>
-          <span class="service-tag">Performance Marketing</span>
-        </div>
-        <div class="service-card reveal reveal-delay-2">
-          <div class="service-icon"><img src="https://images.pexels.com/photos/7610530/pexels-photo-7610530.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Website Design"></div>
-          <h3>Website Design</h3>
-          <p>Stunning, conversion-optimised websites that work on every device and load in under 2 seconds.</p>
-          <span class="service-tag">Web Design</span>
-        </div>
-        <div class="service-card reveal reveal-delay-3">
-          <div class="service-icon"><img src="https://images.pexels.com/photos/3184311/pexels-photo-3184311.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Landing Pages"></div>
-          <h3>Landing Page Design</h3>
-          <p>High-converting landing pages engineered to turn your ad spend into real leads.</p>
-          <span class="service-tag">Conversion</span>
-        </div>
-        <div class="service-card reveal reveal-delay-1">
-          <div class="service-icon"><img src="https://images.pexels.com/photos/1200855/pexels-photo-1200855.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Brand Identity"></div>
-          <h3>Brand Identity Design</h3>
-          <p>Logo, color system, typography, and brand guidelines that make you unforgettable.</p>
-          <span class="service-tag">Branding</span>
-        </div>
-        <div class="service-card reveal reveal-delay-2">
-          <div class="service-icon"><img src="https://images.pexels.com/photos/4990530/pexels-photo-4990530.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Graphic Design"></div>
-          <h3>Carousel & Creative Design</h3>
-          <p>Thumb-stopping social media creatives and carousel ads that drive engagement.</p>
-          <span class="service-tag">Graphic Design</span>
-        </div>
-        <div class="service-card reveal reveal-delay-3">
-          <div class="service-icon"><img src="https://images.pexels.com/photos/5466280/pexels-photo-5466280.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Performance Marketing"></div>
-          <h3>Performance Marketing</h3>
-          <p>End-to-end growth campaigns — ad strategy, creative, targeting, and optimisation.</p>
-          <span class="service-tag">Growth</span>
-        </div>
-        <div class="service-card reveal reveal-delay-1">
-          <div class="service-icon"><img src="https://images.pexels.com/photos/7610457/pexels-photo-7610457.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Video Editing"></div>
-          <h3>Video Editing & Reels</h3>
-          <p>Promotional videos, reels, and social content edited to stop the scroll and drive action.</p>
-          <span class="service-tag">Video</span>
-        </div>
-        <div class="service-card reveal reveal-delay-2">
-          <div class="service-icon"><img src="https://cdn.pixabay.com/photo/2023/02/11/18/19/artificial-intelligence-7783513_1280.jpg" alt="AI Creative"></div>
-          <h3>AI-Powered Creative</h3>
-          <p>AI-assisted video ads and marketing visuals that help you create better, faster — without losing authenticity.</p>
-          <span class="service-tag">AI Solutions</span>
-        </div>
-      </div>
-      <div style="text-align:center;margin-top:3rem">
-        <a class="btn-secondary" href="#" onclick="showPage('services')">View All Services →</a>
+    <div class="wrap">
+      <h2>Why a digital menu?</h2>
+      <p class="sub">Simple for your customers, easy for you.</p>
+      <div class="grid three">
+        <div class="card"><div class="ico">📱</div><h3>Scan &amp; view</h3><p>Customers scan the QR code on the table and see your full menu on their phone.</p></div>
+        <div class="card"><div class="ico">✏️</div><h3>Update anytime</h3><p>Change prices, add new dishes or mark items sold out in minutes. No reprinting.</p></div>
+        <div class="card"><div class="ico">💸</div><h3>Save printing cost</h3><p>Stop paying for printed menus every time something changes.</p></div>
+        <div class="card"><div class="ico">🎨</div><h3>Matches your brand</h3><p>Your colours, your logo and your photos, designed to look premium.</p></div>
+        <div class="card"><div class="ico">⚡</div><h3>Fast loading</h3><p>Built to open quickly even on slow mobile networks.</p></div>
+        <div class="card"><div class="ico">💬</div><h3>WhatsApp ordering</h3><p>Optional: let customers send their order straight to your WhatsApp.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- FEATURED WORK -->
-  <section style="background:linear-gradient(180deg,transparent,rgba(0,166,255,0.02),transparent)">
-    <div class="container">
-      <div class="text-center reveal">
-        <div class="section-eyebrow">Featured Work</div>
-        <h2 class="section-title">Work That <span style="color:var(--blue)">Speaks</span></h2>
-      </div>
-      <div class="portfolio-grid" style="margin-top:3rem">
-        <div class="portfolio-card reveal reveal-delay-1">
-          <div class="portfolio-thumb">
-            <div class="portfolio-thumb-inner" style="background:linear-gradient(135deg,#050B1E,#0A1628)">
-              <div style="text-align:center">
-                <div class="pf-icon-box"><img src="https://images.pexels.com/photos/3720708/pexels-photo-3720708.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Freedom Studio"></div>
-                <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;color:var(--blue);font-size:0.9rem">FREEDOM STUDIO</div>
-              </div>
-            </div>
-            <div class="portfolio-overlay">
-              <span style="color:#fff;font-weight:600;font-size:0.9rem">View Project →</span>
-            </div>
-          </div>
-          <div class="portfolio-info">
-            <h3>Freedom Studio Website</h3>
-            <p>Agency branding & premium web design</p>
-            <span class="portfolio-tag">Website</span>
-          </div>
-          <a class="portfolio-link" href="https://freedom-studio.pages.dev" target="_blank" rel="noopener">↗</a>
-        </div>
-        <div class="portfolio-card reveal reveal-delay-2">
-          <div class="portfolio-thumb">
-            <div class="portfolio-thumb-inner" style="background:linear-gradient(135deg,#0d1b2a,#1a3a5c)">
-              <div style="text-align:center">
-                <div class="pf-icon-box"><img src="https://images.pexels.com/photos/3183174/pexels-photo-3183174.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Kumbh Snan"></div>
-                <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;color:#8ecae6;font-size:0.9rem">KUMBH SNAN</div>
-              </div>
-            </div>
-            <div class="portfolio-overlay">
-              <span style="color:#fff;font-weight:600;font-size:0.9rem">View Live →</span>
-            </div>
-          </div>
-          <div class="portfolio-info">
-            <h3>Kumbh Snan</h3>
-            <p>Multi-page website with premium design & SEO</p>
-            <span class="portfolio-tag">Website</span>
-          </div>
-          <a class="portfolio-link" href="https://kumbh-snan.com" target="_blank" rel="noopener">↗</a>
-        </div>
-        <div class="portfolio-card reveal reveal-delay-3">
-          <div class="portfolio-thumb">
-            <div class="portfolio-thumb-inner" style="background:linear-gradient(135deg,#1a0a2e,#2d1b69)">
-              <div style="text-align:center">
-                <div class="pf-icon-box"><img src="https://images.pexels.com/photos/4990542/pexels-photo-4990542.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Fashion Hood"></div>
-                <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;color:#c77dff;font-size:0.9rem">FASHION HOOD</div>
-              </div>
-            </div>
-            <div class="portfolio-overlay">
-              <span style="color:#fff;font-weight:600;font-size:0.9rem">View Live →</span>
-            </div>
-          </div>
-          <div class="portfolio-info">
-            <h3>Fashion Hood</h3>
-            <p>Premium e-commerce with advanced animations</p>
-            <span class="portfolio-tag">E-commerce</span>
-          </div>
-          <a class="portfolio-link" href="https://fashion-hood.pages.dev" target="_blank" rel="noopener">↗</a>
-        </div>
+  <!-- SAMPLES -->
+  <section id="samples">
+    <div class="wrap">
+      <h2>See our work</h2>
+      <p class="sub">Tap any sample to open the live menu, just like your customers will see it.</p>
+      <div class="grid three">
+        <a class="sample s1" href="https://menu-cards.pages.dev/bento-cafe" target="_blank" rel="noopener">
+          <div class="thumb">☕</div>
+          <div class="body"><div class="kind">Cafe</div><h3>Bento Cafe</h3><span class="view">View live menu &rarr;</span></div>
+        </a>
+        <a class="sample s2" href="https://menu-cards.pages.dev/heaven-darbar" target="_blank" rel="noopener">
+          <div class="thumb">🍛</div>
+          <div class="body"><div class="kind">Restaurant</div><h3>Heaven Darbar</h3><span class="view">View live menu &rarr;</span></div>
+        </a>
+        <a class="sample s3" href="https://menu-cards.pages.dev/pizza-lo" target="_blank" rel="noopener">
+          <div class="thumb">🍕</div>
+          <div class="body"><div class="kind">Pizza Outlet</div><h3>Pizza Lo</h3><span class="view">View live menu &rarr;</span></div>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- WHY CHOOSE US -->
+  <!-- HOW IT WORKS -->
   <section>
-    <div class="container">
-      <div class="text-center reveal">
-        <div class="section-eyebrow">Why Freedom Studio</div>
-        <h2 class="section-title">The <span style="color:var(--blue)">Unfair</span> Advantage</h2>
-        <p class="section-sub">We don't just make things look good. We engineer growth systems that compound over time.</p>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin-top:4rem">
-        <div class="value-card reveal reveal-delay-1">
-          <div class="value-icon"><img src="https://images.pexels.com/photos/3183145/pexels-photo-3183145.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Strategy First"></div>
-          <h3>Strategy First</h3>
-          <p>Every project starts with a deep-dive into your market, competitors, and goals — no guesswork.</p>
-        </div>
-        <div class="value-card reveal reveal-delay-2">
-          <div class="value-icon"><img src="https://images.pexels.com/photos/4990543/pexels-photo-4990543.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Fast Delivery"></div>
-          <h3>Fast Delivery</h3>
-          <p>First drafts in 48 hours. Full projects delivered in days, not months. Speed is a competitive edge.</p>
-        </div>
-        <div class="value-card reveal reveal-delay-3">
-          <div class="value-icon"><img src="https://images.pexels.com/photos/3184638/pexels-photo-3184638.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Data-Driven"></div>
-          <h3>Data-Driven</h3>
-          <p>Every design and ad decision is backed by analytics, A/B testing, and proven conversion principles.</p>
-        </div>
-        <div class="value-card reveal reveal-delay-4">
-          <div class="value-icon"><img src="https://images.pexels.com/photos/6632536/pexels-photo-6632536.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Transparent Pricing"></div>
-          <h3>Transparent Pricing</h3>
-          <p>No hidden fees. No surprises. You know exactly what you're getting before we start.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROCESS -->
-  <section style="background:linear-gradient(180deg,transparent,rgba(0,166,255,0.02),transparent)">
-    <div class="container">
-      <div class="text-center reveal">
-        <div class="section-eyebrow">How We Work</div>
-        <h2 class="section-title">Our <span style="color:var(--blue)">Process</span></h2>
-        <p class="section-sub">A proven 4-step system that transforms ideas into brands that convert.</p>
-      </div>
-      <div class="process-steps">
-        <div class="process-step reveal reveal-delay-1">
-          <div class="process-num">01</div>
-          <h3>Discovery Call</h3>
-          <p>We learn your business, goals, audience, and competition in a focused 30-minute call.</p>
-        </div>
-        <div class="process-step reveal reveal-delay-2">
-          <div class="process-num">02</div>
-          <h3>Strategy & Plan</h3>
-          <p>We map out the complete creative and marketing strategy tailored to your market.</p>
-        </div>
-        <div class="process-step reveal reveal-delay-3">
-          <div class="process-num">03</div>
-          <h3>Design & Build</h3>
-          <p>Our team creates, designs, and delivers — with your feedback at every stage.</p>
-        </div>
-        <div class="process-step reveal reveal-delay-4">
-          <div class="process-num">04</div>
-          <h3>Launch & Grow</h3>
-          <p>We go live, track performance, and keep optimising until the numbers move.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section>
-    <div class="container">
-      <div class="text-center reveal">
-        <div class="section-eyebrow">What Clients Say</div>
-        <h2 class="section-title">Real <span style="color:var(--blue)">Results</span>, Real People</h2>
-      </div>
-      <div class="testimonials-grid">
-        <div class="testimonial-card reveal reveal-delay-1">
-          <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"Freedom Studio completely transformed our online presence. Our website bookings doubled within the first month. They understand what local businesses actually need."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">RA</div>
-            <div>
-              <div class="author-name">Raj Agarwal</div>
-              <div class="author-role">Restaurant Owner, Mumbai</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card reveal reveal-delay-2">
-          <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"The Meta Ads campaign they built generated 40 qualified real estate leads in the first 2 weeks. Worth every rupee. These people know digital marketing inside out."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">PV</div>
-            <div>
-              <div class="author-name">Priya Verma</div>
-              <div class="author-role">Real Estate Agent, Pune</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card reveal reveal-delay-3">
-          <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"I was spending ₹50,000/month on ads with zero results. Freedom Studio rebuilt everything from scratch — now I'm getting 3x returns. The website they made is stunning."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">SM</div>
-            <div>
-              <div class="author-name">Sahil Mehta</div>
-              <div class="author-role">E-commerce Brand Founder</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section>
-    <div class="container">
-      <div class="text-center reveal">
-        <div class="section-eyebrow">FAQ</div>
-        <h2 class="section-title">Common <span style="color:var(--blue)">Questions</span></h2>
-      </div>
-      <div class="faq-list">
-        <div class="faq-item reveal" onclick="toggleFaq(this)">
-          <div class="faq-q">How long does a website take to build? <span class="faq-icon">+</span></div>
-          <div class="faq-a">Single-page websites are typically ready in 3–5 business days. Multi-page business websites take 7–10 days. Premium websites with advanced animations take 10–14 days. We always share a realistic timeline on your discovery call.</div>
-        </div>
-        <div class="faq-item reveal" onclick="toggleFaq(this)">
-          <div class="faq-q">Do you run the ads or just set them up? <span class="faq-icon">+</span></div>
-          <div class="faq-a">Both options are available. We can fully manage your Meta/Facebook/Instagram ad campaigns on a monthly retainer, or set up the campaigns and hand them over to you with full training. Most clients prefer the managed option so we handle optimisation continuously.</div>
-        </div>
-        <div class="faq-item reveal" onclick="toggleFaq(this)">
-          <div class="faq-q">What kind of businesses do you work with? <span class="faq-icon">+</span></div>
-          <div class="faq-a">We work with local businesses, restaurants, real estate agents, startups, e-commerce brands, personal brands, coaches, and service businesses. If you're a business that needs more customers — we can help.</div>
-        </div>
-        <div class="faq-item reveal" onclick="toggleFaq(this)">
-          <div class="faq-q">Can I see the website before I pay? <span class="faq-icon">+</span></div>
-          <div class="faq-a">Yes. We provide a complete preview before final payment. You only pay 50% to start the project and 50% after you're fully satisfied with the result. No risk on your end.</div>
-        </div>
-        <div class="faq-item reveal" onclick="toggleFaq(this)">
-          <div class="faq-q">Do you offer revisions? <span class="faq-icon">+</span></div>
-          <div class="faq-a">Absolutely. Every project includes unlimited revisions until you're 100% happy. We don't stop until the work is exactly what you need.</div>
-        </div>
+    <div class="wrap">
+      <h2>How it works</h2>
+      <p class="sub">Three simple steps. No technical knowledge needed.</p>
+      <div class="grid three steps" style="margin-top:28px">
+        <div class="card"><div class="num">1</div><h3>Message us</h3><p>Send a WhatsApp message with your restaurant name.</p></div>
+        <div class="card"><div class="num">2</div><h3>Share your menu</h3><p>Send a photo of your current menu card with item names and prices.</p></div>
+        <div class="card"><div class="num">3</div><h3>Go live</h3><p>We build it and give you the link and a ready-to-print QR code.</p></div>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
   <section>
-    <div class="container">
-      <div class="cta-section reveal">
-        <h2>Ready to Build a Brand <span style="color:var(--blue)">That Grows?</span></h2>
-        <p>Book a free 30-minute strategy call. No pitches — just a real conversation about your business and what's possible.</p>
-        <div class="cta-actions">
-          <a class="btn-primary" href="#" onclick="showPage('contact')">Book Free Call →</a>
-          <a class="btn-secondary" href="#" onclick="showPage('pricing')">View Pricing</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</div>
-
-<!-- ============================================= -->
-<!-- SERVICES PAGE -->
-<!-- ============================================= -->
-<div class="page" id="page-services">
-  <div style="padding-top:6rem"></div>
-  <section>
-    <div class="container">
-      <div class="text-center reveal">
-        <div class="section-eyebrow">Our Services</div>
-        <h2 class="section-title">Everything Your Brand <span style="color:var(--blue)">Needs</span></h2>
-        <p class="section-sub">Full-service digital agency — from the first ad creative to the final landing page, we cover it all.</p>
-      </div>
-
-      <div style="margin-top:4rem">
-        <div class="service-detail reveal">
-          <div class="service-detail-header">
-            <div class="service-detail-icon"><img src="https://images.pexels.com/photos/3183126/pexels-photo-3183126.jpeg?auto=compress&cs=tinysrgb&w=250" alt="Meta Ads"></div>
-            <div>
-              <h2>Meta & Facebook Ads</h2>
-              <p style="color:var(--muted);font-size:0.9rem;margin-top:0.25rem">Paid social advertising that turns your budget into booked appointments and sales.</p>
-            </div>
-          </div>
-          <div class="service-detail-grid">
-            <div class="service-detail-col">
-              <h4>Benefits</h4>
-              <ul>
-                <li>Reach thousands of ideal customers</li>
-                <li>Trackable ROI from day one</li>
-                <li>Scale as you grow</li>
-                <li>Retarget website visitors</li>
-              </ul>
-            </div>
-            <div class="service-detail-col">
-              <h4>Deliverables</h4>
-              <ul>
-                <li>Campaign strategy & setup</li>
-                <li>Ad creative design</li>
-                <li>Audience research & targeting</li>
-                <li>Weekly performance reports</li>
-              </ul>
-            </div>
-            <div class="service-detail-col">
-              <h4>Process</h4>
-              <ul>
-                <li>Market & competitor audit</li>
-                <li>Creative production</li>
-                <li>Campaign launch & test</li>
-                <li>Continuous optimisation</li>
-              </ul>
-            </div>
-          </div>
-          <div style="margin-top:2rem">
-            <a class="btn-primary" href="#" onclick="showPage('contact')" style="font-size:0.85rem;padding:0.7rem 1.5rem">Get a Custom Quote →</a>
-          </div>
-        </div>
-
-        <div class="service-detail reveal">
-          <div class="service-detail-header">
-            <div class="service-detail-icon"><img src="https://images.pexels.com/photos/7610530/pexels-photo-7610530.jpeg?auto=compress&cs=tinysrgb&w=250" alt="Website Design"></div>
-            <div>
-              <h2>Website Design</h2>
-              <p style="color:var(--muted);font-size:0.9rem;margin-top:0.25rem">Conversion-focused websites that look premium and work hard 24/7.</p>
-            </div>
-          </div>
-          <div class="service-detail-grid">
-            <div class="service-detail-col">
-              <h4>Benefits</h4>
-              <ul>
-                <li>Make a powerful first impression</li>
-                <li>Convert visitors into leads</li>
-                <li>Fast loading on all devices</li>
-                <li>SEO-ready from day one</li>
-              </ul>
-            </div>
-            <div class="service-detail-col">
-              <h4>Deliverables</h4>
-              <ul>
-                <li>Fully responsive website</li>
-                <li>Custom UI/UX design</li>
-                <li>SEO meta tags & sitemap</li>
-                <li>Contact/lead forms</li>
-              </ul>
-            </div>
-            <div class="service-detail-col">
-              <h4>Packages</h4>
-              <ul>
-                <li>Starter — ₹4,000</li>
-                <li>Business — ₹10,000</li>
-                <li>Premium — ₹15,000</li>
-                <li>Custom quote available</li>
-              </ul>
-            </div>
-          </div>
-          <div style="margin-top:2rem">
-            <a class="btn-primary" href="#" onclick="showPage('pricing')" style="font-size:0.85rem;padding:0.7rem 1.5rem">See Pricing →</a>
-          </div>
-        </div>
-
-        <div class="service-detail reveal">
-          <div class="service-detail-header">
-            <div class="service-detail-icon"><img src="https://images.pexels.com/photos/1200855/pexels-photo-1200855.jpeg?auto=compress&cs=tinysrgb&w=250" alt="Brand Identity"></div>
-            <div>
-              <h2>Brand Identity Design</h2>
-              <p style="color:var(--muted);font-size:0.9rem;margin-top:0.25rem">A brand that stops people mid-scroll and stays in their memory.</p>
-            </div>
-          </div>
-          <div class="service-detail-grid">
-            <div class="service-detail-col">
-              <h4>Benefits</h4>
-              <ul>
-                <li>Stand out from competitors</li>
-                <li>Build instant trust</li>
-                <li>Consistent across platforms</li>
-                <li>Professional at every touchpoint</li>
-              </ul>
-            </div>
-            <div class="service-detail-col">
-              <h4>Deliverables</h4>
-              <ul>
-                <li>Logo suite (all formats)</li>
-                <li>Color palette & typography</li>
-                <li>Brand guidelines PDF</li>
-                <li>Social media templates</li>
-              </ul>
-            </div>
-            <div class="service-detail-col">
-              <h4>Process</h4>
-              <ul>
-                <li>Brand discovery questionnaire</li>
-                <li>Mood board & concept</li>
-                <li>Logo design & variations</li>
-                <li>Full brand system delivery</li>
-              </ul>
-            </div>
-          </div>
-          <div style="margin-top:2rem">
-            <a class="btn-primary" href="#" onclick="showPage('contact')" style="font-size:0.85rem;padding:0.7rem 1.5rem">Get a Custom Quote →</a>
-          </div>
-        </div>
-
-        <div class="service-detail reveal">
-          <div class="service-detail-header">
-            <div class="service-detail-icon"><img src="https://images.pexels.com/photos/3184311/pexels-photo-3184311.jpeg?auto=compress&cs=tinysrgb&w=250" alt="Landing Pages"></div>
-            <div>
-              <h2>Landing Page Design</h2>
-              <p style="color:var(--muted);font-size:0.9rem;margin-top:0.25rem">Single-purpose pages engineered to turn paid traffic into paying customers.</p>
-            </div>
-          </div>
-          <div class="service-detail-grid">
-            <div class="service-detail-col">
-              <h4>Benefits</h4>
-              <ul>
-                <li>Lower cost per lead</li>
-                <li>Higher ad quality score</li>
-                <li>Message match with ads</li>
-                <li>Built for mobile-first users</li>
-              </ul>
-            </div>
-            <div class="service-detail-col">
-              <h4>Deliverables</h4>
-              <ul>
-                <li>Conversion-optimized design</li>
-                <li>Lead capture form</li>
-                <li>Thank-you page</li>
-                <li>Speed-optimized code</li>
-              </ul>
-            </div>
-            <div class="service-detail-col">
-              <h4>Process</h4>
-              <ul>
-                <li>Offer & audience analysis</li>
-                <li>Copywriting & wireframe</li>
-                <li>Design & development</li>
-                <li>A/B test setup</li>
-              </ul>
-            </div>
-          </div>
-          <div style="margin-top:2rem">
-            <a class="btn-primary" href="#" onclick="showPage('contact')" style="font-size:0.85rem;padding:0.7rem 1.5rem">Get a Custom Quote →</a>
-          </div>
-        </div>
-
-        <div class="service-detail reveal">
-          <div class="service-detail-header">
-            <div class="service-detail-icon"><img src="https://images.pexels.com/photos/4990530/pexels-photo-4990530.jpeg?auto=compress&cs=tinysrgb&w=250" alt="Graphic Design"></div>
-            <div>
-              <h2>Graphic & Carousel Design</h2>
-              <p style="color:var(--muted);font-size:0.9rem;margin-top:0.25rem">Social media creatives and ad graphics that stop the scroll and drive action.</p>
-            </div>
-          </div>
-          <div class="service-detail-grid">
-            <div class="service-detail-col">
-              <h4>Benefits</h4>
-              <ul>
-                <li>Higher engagement rates</li>
-                <li>Brand-consistent creatives</li>
-                <li>Ready for all formats</li>
-                <li>Fast turnaround</li>
-              </ul>
-            </div>
-            <div class="service-detail-col">
-              <h4>Deliverables</h4>
-              <ul>
-                <li>Feed posts & stories</li>
-                <li>Carousel ad sets</li>
-                <li>Banner & display ads</li>
-                <li>Editable source files</li>
-              </ul>
-            </div>
-            <div class="service-detail-col">
-              <h4>Formats</h4>
-              <ul>
-                <li>Instagram & Facebook</li>
-                <li>WhatsApp campaigns</li>
-                <li>Google Display</li>
-                <li>Print-ready files</li>
-              </ul>
-            </div>
-          </div>
-          <div style="margin-top:2rem">
-            <a class="btn-primary" href="#" onclick="showPage('contact')" style="font-size:0.85rem;padding:0.7rem 1.5rem">Get a Custom Quote →</a>
-          </div>
-        </div>
-
-        <div class="service-detail reveal">
-          <div class="service-detail-header">
-            <div class="service-detail-icon"><img src="https://images.pexels.com/photos/7610457/pexels-photo-7610457.jpeg?auto=compress&cs=tinysrgb&w=250" alt="Video Editing"></div>
-            <div>
-              <h2>Video Editing & Reels</h2>
-              <p style="color:var(--muted);font-size:0.9rem;margin-top:0.25rem">Video content designed to stop the scroll, communicate your offer, and build trust.</p>
-            </div>
-          </div>
-          <div class="service-detail-grid">
-            <div class="service-detail-col">
-              <h4>Benefits</h4>
-              <ul>
-                <li>Higher engagement on social</li>
-                <li>Builds trust faster than static posts</li>
-                <li>Ready for Reels, Shorts & ads</li>
-                <li>Consistent brand look on video</li>
-              </ul>
-            </div>
-            <div class="service-detail-col">
-              <h4>Deliverables</h4>
-              <ul>
-                <li>Reels & short-form edits</li>
-                <li>Promotional/ad videos</li>
-                <li>Product & business videos</li>
-                <li>Captions, transitions & sound design</li>
-              </ul>
-            </div>
-            <div class="service-detail-col">
-              <h4>Process</h4>
-              <ul>
-                <li>Raw footage or script review</li>
-                <li>Edit, caption & sound pass</li>
-                <li>Revisions</li>
-                <li>Export in all required formats</li>
-              </ul>
-            </div>
-          </div>
-          <div style="margin-top:2rem">
-            <a class="btn-primary" href="#" onclick="showPage('contact')" style="font-size:0.85rem;padding:0.7rem 1.5rem">Get a Custom Quote →</a>
-          </div>
-        </div>
-
-        <div class="service-detail reveal">
-          <div class="service-detail-header">
-            <div class="service-detail-icon"><img src="https://cdn.pixabay.com/photo/2023/02/11/18/19/artificial-intelligence-7783513_1280.jpg" alt="AI Creative"></div>
-            <div>
-              <h2>AI-Powered Creative</h2>
-              <p style="color:var(--muted);font-size:0.9rem;margin-top:0.25rem">AI-assisted video ads and marketing visuals that help you create better, faster — without losing authenticity.</p>
-            </div>
-          </div>
-          <div class="service-detail-grid">
-            <div class="service-detail-col">
-              <h4>Benefits</h4>
-              <ul>
-                <li>Faster creative turnaround</li>
-                <li>Lower cost per creative</li>
-                <li>Scales content production</li>
-                <li>Blended with real footage for trust</li>
-              </ul>
-            </div>
-            <div class="service-detail-col">
-              <h4>Deliverables</h4>
-              <ul>
-                <li>AI-assisted video advertisements</li>
-                <li>AI-generated marketing visuals</li>
-                <li>AI-assisted campaign creative</li>
-                <li>Human review & polish on every asset</li>
-              </ul>
-            </div>
-            <div class="service-detail-col">
-              <h4>Our Approach</h4>
-              <ul>
-                <li>AI enhances — it doesn't fake credibility</li>
-                <li>Real work & real proof come first</li>
-                <li>Used to speed up, not replace, our team</li>
-                <li>One part of a full-service offering</li>
-              </ul>
-            </div>
-          </div>
-          <div style="margin-top:2rem">
-            <a class="btn-primary" href="#" onclick="showPage('contact')" style="font-size:0.85rem;padding:0.7rem 1.5rem">Get a Custom Quote →</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="cta-section reveal" style="margin-top:4rem">
-        <h2>Not Sure Which Service <span style="color:var(--blue)">You Need?</span></h2>
-        <p>Book a free 30-minute call and we'll tell you exactly what will move the needle for your business.</p>
-        <a class="btn-primary" href="#" onclick="showPage('contact')">Book Free Strategy Call →</a>
-      </div>
-    </div>
-  </section>
-</div>
-
-<!-- ============================================= -->
-<!-- PORTFOLIO PAGE -->
-<!-- ============================================= -->
-<div class="page" id="page-portfolio">
-  <div style="padding-top:6rem"></div>
-  <section>
-    <div class="container">
-      <div class="text-center reveal">
-        <div class="section-eyebrow">Our Work</div>
-        <h2 class="section-title">Projects That <span style="color:var(--blue)">Prove</span> the Point</h2>
-        <p class="section-sub">Every project is built with obsessive attention to detail, real strategy, and a relentless focus on outcomes.</p>
-      </div>
-      <div class="portfolio-filter" style="margin-top:3rem">
-        <button class="filter-btn active" data-filter="all">All Work</button>
-        <button class="filter-btn" data-filter="website">Websites</button>
-        <button class="filter-btn" data-filter="ads">Ads</button>
-        <button class="filter-btn" data-filter="branding">Branding</button>
-        <button class="filter-btn" data-filter="social">Social Media</button>
-      </div>
-      <div class="portfolio-grid" id="portfolio-grid">
-        <div class="portfolio-card reveal" data-cat="website">
-          <div class="portfolio-thumb">
-            <div class="portfolio-thumb-inner" style="background:linear-gradient(135deg,#050B1E,#0A1628);flex-direction:column;gap:0.5rem">
-              <div class="pf-icon-box"><img src="https://images.pexels.com/photos/3720708/pexels-photo-3720708.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Freedom Studio"></div>
-              <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;color:var(--blue);font-size:0.85rem;letter-spacing:0.05em">FREEDOM STUDIO</div>
-              <div style="width:60px;height:2px;background:var(--blue);border-radius:2px"></div>
-            </div>
-            <div class="portfolio-overlay">
-              <a href="https://freedom-studio.pages.dev" target="_blank" style="color:#fff;font-weight:600;text-decoration:none;background:rgba(0,0,0,0.5);padding:0.5rem 1rem;border-radius:50px">Visit Site →</a>
-            </div>
-          </div>
-          <div class="portfolio-info">
-            <h3>Freedom Studio</h3>
-            <p>Premium agency website with custom animations, dark UI, and conversion-focused design.</p>
-            <span class="portfolio-tag">Website</span>
-          </div>
-          <a class="portfolio-link" href="https://freedom-studio.pages.dev" target="_blank" rel="noopener">↗</a>
-        </div>
-
-        <div class="portfolio-card reveal reveal-delay-1" data-cat="website">
-          <div class="portfolio-thumb">
-            <div class="portfolio-thumb-inner" style="background:linear-gradient(135deg,#0d1b2a,#1a3a5c);flex-direction:column;gap:0.5rem">
-              <div class="pf-icon-box"><img src="https://images.pexels.com/photos/3183174/pexels-photo-3183174.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Kumbh Snan"></div>
-              <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;color:#8ecae6;font-size:0.85rem;letter-spacing:0.05em">KUMBH SNAN</div>
-              <div style="width:60px;height:2px;background:#8ecae6;border-radius:2px"></div>
-            </div>
-            <div class="portfolio-overlay">
-              <a href="https://kumbh-snan.com" target="_blank" style="color:#fff;font-weight:600;text-decoration:none;background:rgba(0,0,0,0.5);padding:0.5rem 1rem;border-radius:50px">Visit Site →</a>
-            </div>
-          </div>
-          <div class="portfolio-info">
-            <h3>Kumbh Snan</h3>
-            <p>Multi-page website with premium design, SEO optimization, and smooth user experience.</p>
-            <span class="portfolio-tag">Website</span>
-          </div>
-          <a class="portfolio-link" href="https://kumbh-snan.com" target="_blank" rel="noopener">↗</a>
-        </div>
-
-        <div class="portfolio-card reveal reveal-delay-2" data-cat="website">
-          <div class="portfolio-thumb">
-            <div class="portfolio-thumb-inner" style="background:linear-gradient(135deg,#1a0a2e,#2d1b69);flex-direction:column;gap:0.5rem">
-              <div class="pf-icon-box"><img src="https://images.pexels.com/photos/4990542/pexels-photo-4990542.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Fashion Hood"></div>
-              <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;color:#c77dff;font-size:0.85rem;letter-spacing:0.05em">FASHION HOOD</div>
-              <div style="width:60px;height:2px;background:#c77dff;border-radius:2px"></div>
-            </div>
-            <div class="portfolio-overlay">
-              <a href="https://fashion-hood.pages.dev" target="_blank" style="color:#fff;font-weight:600;text-decoration:none;background:rgba(0,0,0,0.5);padding:0.5rem 1rem;border-radius:50px">Visit Site →</a>
-            </div>
-          </div>
-          <div class="portfolio-info">
-            <h3>Fashion Hood</h3>
-            <p>Advanced animations, custom UI, and premium e-commerce experience for a fashion brand.</p>
-            <span class="portfolio-tag">Website</span>
-          </div>
-          <a class="portfolio-link" href="https://fashion-hood.pages.dev" target="_blank" rel="noopener">↗</a>
-        </div>
-
-        <div class="portfolio-card reveal" data-cat="ads">
-          <div class="portfolio-thumb">
-            <div class="portfolio-thumb-inner" style="background:linear-gradient(135deg,#1a0505,#3a0f0f);flex-direction:column;gap:0.75rem">
-              <div style="width:90%;background:rgba(255,255,255,0.05);border:1px solid rgba(255,100,100,0.3);border-radius:8px;padding:1rem;text-align:left">
-                <div style="font-size:0.65rem;color:#ff6b6b;margin-bottom:0.25rem">META ADS</div>
-                <div style="font-size:0.75rem;font-weight:600;color:#fff">Restaurant Special Offer</div>
-                <div style="font-size:0.65rem;color:rgba(255,255,255,0.5);margin-top:0.25rem">Reach: 12,400 · CTR: 4.2%</div>
-              </div>
-            </div>
-            <div class="portfolio-overlay">
-              <span style="color:#fff;font-weight:600;font-size:0.9rem">View Campaign</span>
-            </div>
-          </div>
-          <div class="portfolio-info">
-            <h3>Restaurant Meta Campaign</h3>
-            <p>Lead generation campaign generating 80+ bookings per month at ₹18 per lead.</p>
-            <span class="portfolio-tag">Meta Ads</span>
-          </div>
-        </div>
-
-        <div class="portfolio-card reveal reveal-delay-1" data-cat="branding">
-          <div class="portfolio-thumb">
-            <div class="portfolio-thumb-inner" style="background:linear-gradient(135deg,#0a0a0a,#1a1a1a);flex-direction:column;gap:0.75rem">
-              <div style="width:60px;height:60px;background:linear-gradient(135deg,#00A6FF,#007BFF);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:900;color:#fff;font-family:'Space Grotesk',sans-serif">C</div>
-              <div style="font-size:0.75rem;font-weight:600;color:rgba(255,255,255,0.7);letter-spacing:0.15em">COACH ACADEMY</div>
-            </div>
-            <div class="portfolio-overlay">
-              <span style="color:#fff;font-weight:600;font-size:0.9rem">View Brand</span>
-            </div>
-          </div>
-          <div class="portfolio-info">
-            <h3>Coach Academy Branding</h3>
-            <p>Complete brand identity — logo, colors, typography, and social media templates.</p>
-            <span class="portfolio-tag">Branding</span>
-          </div>
-        </div>
-
-        <div class="portfolio-card reveal reveal-delay-2" data-cat="social">
-          <div class="portfolio-thumb">
-            <div class="portfolio-thumb-inner" style="background:linear-gradient(135deg,#0a1a0a,#0f2e0f);display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:1rem">
-              <div class="food-icon-cell"><img src="https://images.pexels.com/photos/6223226/pexels-photo-6223226.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Pizza"></div>
-              <div class="food-icon-cell"><img src="https://images.pexels.com/photos/6223229/pexels-photo-6223229.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Salad"></div>
-              <div class="food-icon-cell"><img src="https://images.pexels.com/photos/6223233/pexels-photo-6223233.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Pasta"></div>
-              <div class="food-icon-cell"><img src="https://images.pexels.com/photos/6223196/pexels-photo-6223196.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Drinks"></div>
-            </div>
-            <div class="portfolio-overlay">
-              <span style="color:#fff;font-weight:600;font-size:0.9rem">View Creatives</span>
-            </div>
-          </div>
-          <div class="portfolio-info">
-            <h3>Restaurant Social Media Pack</h3>
-            <p>30-day content calendar with daily post designs, stories, and carousel ads.</p>
-            <span class="portfolio-tag">Social Media</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="cta-section reveal" style="margin-top:4rem">
-        <h2>Want to Be Our <span style="color:var(--blue)">Next Case Study?</span></h2>
-        <p>Let's build something that you'll be proud to show off.</p>
-        <a class="btn-primary" href="#" onclick="showPage('contact')">Start Your Project →</a>
-      </div>
-    </div>
-  </section>
-</div>
-
-<!-- ============================================= -->
-<!-- PRICING PAGE -->
-<!-- ============================================= -->
-<div class="page" id="page-pricing">
-  <div style="padding-top:6rem"></div>
-  <section>
-    <div class="container">
-      <div class="text-center reveal">
-        <div class="section-eyebrow">Pricing</div>
-        <h2 class="section-title">Transparent Pricing. <span style="color:var(--blue)">Zero Surprises.</span></h2>
-        <p class="section-sub">Three packages built for different stages of your business. All include free consultation and unlimited revisions.</p>
-      </div>
-      <div class="pricing-grid">
-        <div class="pricing-card reveal reveal-delay-1">
-          <div class="pricing-tier">Starter</div>
-          <div class="pricing-name">Starter Website</div>
-          <div class="pricing-price">
-            <span class="pricing-currency">₹</span>
-            <span class="pricing-amount">4,000</span>
-            <span class="pricing-period"> one-time</span>
-          </div>
-          <ul class="pricing-features">
-            <li>Single page website</li>
-            <li>Mobile responsive design</li>
-            <li>Fast loading (95+ speed score)</li>
-            <li>Contact form included</li>
-            <li>Basic SEO setup</li>
-            <li>3 revisions included</li>
-            <li>Delivered in 3–5 days</li>
-          </ul>
-          <a class="btn-secondary" href="#" onclick="showPage('contact')" style="display:block;text-align:center;border-radius:12px">Get Started</a>
-          <div class="pricing-example">Example: <a href="https://freedom-studio.pages.dev" target="_blank">freedom-studio.pages.dev</a></div>
-        </div>
-
-        <div class="pricing-card featured reveal reveal-delay-2">
-          <div class="pricing-badge">Most Popular</div>
-          <div class="pricing-tier">Business</div>
-          <div class="pricing-name">Business Website</div>
-          <div class="pricing-price">
-            <span class="pricing-currency">₹</span>
-            <span class="pricing-amount">10,000</span>
-            <span class="pricing-period"> one-time</span>
-          </div>
-          <ul class="pricing-features">
-            <li>Multi-page website (up to 6 pages)</li>
-            <li>Premium custom design</li>
-            <li>SEO friendly & fast</li>
-            <li>Google Analytics setup</li>
-            <li>WhatsApp & call integration</li>
-            <li>Blog or portfolio section</li>
-            <li>Unlimited revisions</li>
-            <li>Delivered in 7–10 days</li>
-          </ul>
-          <a class="btn-primary" href="#" onclick="showPage('contact')" style="display:block;text-align:center;border-radius:12px">Get Started</a>
-          <div class="pricing-example">Example: <a href="https://kumbh-snan.com" target="_blank">kumbh-snan.com</a></div>
-        </div>
-
-        <div class="pricing-card reveal reveal-delay-3">
-          <div class="pricing-tier">Premium</div>
-          <div class="pricing-name">Premium Website</div>
-          <div class="pricing-price">
-            <span class="pricing-currency">₹</span>
-            <span class="pricing-amount">15,000</span>
-            <span class="pricing-period"> one-time</span>
-          </div>
-          <ul class="pricing-features">
-            <li>Advanced animations & interactions</li>
-            <li>Custom UI design system</li>
-            <li>Premium user experience</li>
-            <li>Performance optimized</li>
-            <li>Advanced SEO setup</li>
-            <li>CMS integration (if needed)</li>
-            <li>Priority support</li>
-            <li>Delivered in 10–14 days</li>
-          </ul>
-          <a class="btn-secondary" href="#" onclick="showPage('contact')" style="display:block;text-align:center;border-radius:12px">Get Started</a>
-          <div class="pricing-example">Example: <a href="https://fashion-hood.pages.dev" target="_blank">fashion-hood.pages.dev</a></div>
-        </div>
-      </div>
-
-      <!-- Subscription Website Offer -->
-      <div class="cta-section reveal" style="margin-top:4rem;background:rgba(0,166,255,0.06);border:1px solid var(--border)">
-        <div style="font-size:0.8rem;color:var(--blue);font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem">Low-Entry Option</div>
-        <h2>Professional Website for Just <span style="color:var(--blue)">₹899/month</span></h2>
-        <p>No website yet? No big upfront budget? This plan gets your business online fast — with a free domain and free hosting included.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center;margin:1.5rem 0">
-          <span style="background:rgba(0,166,255,0.1);border:1px solid var(--border);color:var(--muted);font-size:0.8rem;padding:0.5rem 1rem;border-radius:50px">Free Domain</span>
-          <span style="background:rgba(0,166,255,0.1);border:1px solid var(--border);color:var(--muted);font-size:0.8rem;padding:0.5rem 1rem;border-radius:50px">Free Hosting</span>
-          <span style="background:rgba(0,166,255,0.1);border:1px solid var(--border);color:var(--muted);font-size:0.8rem;padding:0.5rem 1rem;border-radius:50px">Mobile Responsive</span>
-          <span style="background:rgba(0,166,255,0.1);border:1px solid var(--border);color:var(--muted);font-size:0.8rem;padding:0.5rem 1rem;border-radius:50px">Professional UI</span>
-          <span style="background:rgba(0,166,255,0.1);border:1px solid var(--border);color:var(--muted);font-size:0.8rem;padding:0.5rem 1rem;border-radius:50px">Business-Focused Structure</span>
-        </div>
-        <a class="btn-primary" href="#" onclick="showPage('contact')">Get Started for ₹899/mo →</a>
-      </div>
-
-      <!-- Add-ons -->
-      <div style="margin-top:4rem">
-        <div class="text-center reveal">
-          <h3 style="font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:700;margin-bottom:0.75rem">Need More? <span style="color:var(--blue)">Add-Ons Available</span></h3>
-          <p style="color:var(--muted);font-size:0.9rem">Pick exactly what your business needs</p>
-        </div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:2rem">
-          <div class="service-card" style="padding:1.5rem">
-            <div class="addon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 011.688-1.688h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg></div>
-            <h4 style="font-size:0.9rem;font-weight:600;margin-bottom:0.25rem">Brand Identity</h4>
-            <p style="font-size:0.8rem;color:var(--muted)">Logo + colors + guidelines</p>
-            <div style="color:var(--blue);font-weight:700;font-size:0.9rem;margin-top:0.5rem">From ₹5,000</div>
-          </div>
-          <div class="service-card" style="padding:1.5rem">
-            <div class="addon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg></div>
-            <h4 style="font-size:0.9rem;font-weight:600;margin-bottom:0.25rem">Social Media Pack</h4>
-            <p style="font-size:0.8rem;color:var(--muted)">30 posts + stories + covers</p>
-            <div style="color:var(--blue);font-weight:700;font-size:0.9rem;margin-top:0.5rem">From ₹3,000</div>
-          </div>
-          <div class="service-card" style="padding:1.5rem">
-            <div class="addon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-            <h4 style="font-size:0.9rem;font-weight:600;margin-bottom:0.25rem">Meta Ads Setup</h4>
-            <p style="font-size:0.8rem;color:var(--muted)">Campaign + creatives + launch</p>
-            <div style="color:var(--blue);font-weight:700;font-size:0.9rem;margin-top:0.5rem">From ₹8,000</div>
-          </div>
-          <div class="service-card" style="padding:1.5rem">
-            <div class="addon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
-            <h4 style="font-size:0.9rem;font-weight:600;margin-bottom:0.25rem">Monthly Ads Management</h4>
-            <p style="font-size:0.8rem;color:var(--muted)">Ongoing campaign optimisation</p>
-            <div style="color:var(--blue);font-weight:700;font-size:0.9rem;margin-top:0.5rem">From ₹6,000/mo</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="cta-section reveal" style="margin-top:4rem">
-        <h2>Not Sure Which <span style="color:var(--blue)">Package Fits?</span></h2>
-        <p>Book a free 30-minute call. We'll tell you exactly what you need — and what you don't.</p>
-        <a class="btn-primary" href="#" onclick="showPage('contact')">Book Free Strategy Call →</a>
-      </div>
-    </div>
-  </section>
-</div>
-
-<!-- ============================================= -->
-<!-- ABOUT PAGE -->
-<!-- ============================================= -->
-<div class="page" id="page-about">
-  <div style="padding-top:6rem"></div>
-  <section>
-    <div class="container">
-      <div class="text-center reveal">
-        <div class="section-eyebrow">Our Story</div>
-        <h2 class="section-title">Built on the Belief That <span style="color:var(--blue)">Every Business Deserves to Grow</span></h2>
-      </div>
-      <div class="about-story">
-        <div>
-          <p style="color:var(--muted);line-height:1.9;margin-bottom:1.5rem">Freedom Studio was born from a simple frustration: too many great businesses were invisible online, while inferior ones dominated because they had better marketing.</p>
-          <p style="color:var(--muted);line-height:1.9;margin-bottom:1.5rem">We built Freedom Studio to change that — to give local businesses, restaurants, coaches, and startups access to the same level of premium design and performance marketing that big brands take for granted.</p>
-          <p style="color:var(--muted);line-height:1.9">Every project we take on is a mission. Not just to make something beautiful, but to make something that actually works — that brings in more customers, more bookings, more sales.</p>
-          <div style="margin-top:2rem">
-            <a class="btn-primary" href="#" onclick="showPage('contact')">Work With Us →</a>
-          </div>
-        </div>
-        <div class="about-visual">
-          <div class="about-glow"></div>
-          <div class="about-visual-inner"><img src="https://images.pexels.com/photos/3720708/pexels-photo-3720708.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Freedom Studio"></div>
-        </div>
-      </div>
-
-      <!-- Timeline -->
-      <div style="margin-top:5rem" class="reveal">
-        <div class="section-eyebrow">Our Journey</div>
-        <h2 class="section-title" style="font-size:2rem;margin-bottom:2rem">How We Got Here</h2>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-year">2022</div>
-            <div class="timeline-title">First Client</div>
-            <div class="timeline-desc">Started with our first website project — a local restaurant that doubled its online bookings.</div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-year">2023</div>
-            <div class="timeline-title">Agency Formed</div>
-            <div class="timeline-desc">Freedom Studio officially launched. Built our first complete brand identity and Meta Ads system.</div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-year">2024</div>
-            <div class="timeline-title">50+ Projects</div>
-            <div class="timeline-desc">Crossed 50 projects delivered. Expanded to serve real estate, e-commerce, and coaching brands.</div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-year">2025</div>
-            <div class="timeline-title">150+ Brands Served</div>
-            <div class="timeline-desc">Now one of the fastest-growing digital agencies in the region, with clients across India.</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Mission / Vision -->
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:5rem">
-        <div class="service-detail reveal" style="padding:2rem">
-          <div style="width:56px;height:56px;border-radius:14px;overflow:hidden;margin-bottom:1rem"><img src="https://images.pexels.com/photos/3183126/pexels-photo-3183126.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Our Mission" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-          <h3 style="font-family:'Space Grotesk',sans-serif;font-size:1.2rem;font-weight:700;margin-bottom:0.75rem">Our Mission</h3>
-          <p style="color:var(--muted);font-size:0.9rem;line-height:1.8">To make world-class digital marketing and design accessible to every business — regardless of size. Every brand deserves to look premium and perform like it too.</p>
-        </div>
-        <div class="service-detail reveal reveal-delay-1" style="padding:2rem">
-          <div style="width:56px;height:56px;border-radius:14px;overflow:hidden;margin-bottom:1rem"><img src="https://images.pexels.com/photos/3183174/pexels-photo-3183174.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Our Vision" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-          <h3 style="font-family:'Space Grotesk',sans-serif;font-size:1.2rem;font-weight:700;margin-bottom:0.75rem">Our Vision</h3>
-          <p style="color:var(--muted);font-size:0.9rem;line-height:1.8">To be the most trusted growth partner for businesses across India — the agency that small businesses recommend to each other because we genuinely moved the needle.</p>
-        </div>
-      </div>
-
-      <!-- Values -->
-      <div style="margin-top:5rem" class="reveal">
-        <div class="text-center">
-          <div class="section-eyebrow">What We Stand For</div>
-          <h2 class="section-title" style="font-size:2rem">Our Values</h2>
-        </div>
-        <div class="values-grid" style="margin-top:3rem">
-          <div class="value-card">
-            <div class="value-icon"><img src="https://images.pexels.com/photos/4990530/pexels-photo-4990530.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Obsession with Quality"></div>
-            <h3>Obsession with Quality</h3>
-            <p>We don't ship anything we're not proud of. Every pixel, every word, every ad — crafted with intention.</p>
-          </div>
-          <div class="value-card">
-            <div class="value-icon"><img src="https://images.pexels.com/photos/4990528/pexels-photo-4990528.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Client First"></div>
-            <h3>Client First</h3>
-            <p>Your success is our success. We treat your business like our own and are always reachable.</p>
-          </div>
-          <div class="value-card">
-            <div class="value-icon"><img src="https://images.pexels.com/photos/4990543/pexels-photo-4990543.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Speed Without Sacrifice"></div>
-            <h3>Speed Without Sacrifice</h3>
-            <p>Fast delivery doesn't mean cutting corners. We're fast because we have systems, not shortcuts.</p>
-          </div>
-          <div class="value-card">
-            <div class="value-icon"><img src="https://images.pexels.com/photos/6632536/pexels-photo-6632536.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Results Over Aesthetics"></div>
-            <h3>Results Over Aesthetics</h3>
-            <p>Beautiful work that doesn't perform is just decoration. We care deeply about the metrics that matter.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
-
-<!-- ============================================= -->
-<!-- CONTACT PAGE -->
-<!-- ============================================= -->
-<div class="page" id="page-contact">
-  <div style="padding-top:6rem"></div>
-  <section>
-    <div class="container">
-      <div class="text-center reveal">
-        <div class="section-eyebrow">Let's Talk</div>
-        <h2 class="section-title">Book Your Free <span style="color:var(--blue)">Strategy Call</span></h2>
-        <p class="section-sub">30 minutes. No pitch. Just an honest conversation about your business and what's possible.</p>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-info reveal">
-          <h3>What Happens on the Call?</h3>
-          <p>We'll learn about your business, your current marketing, your goals, and your budget. By the end, you'll have a clear picture of exactly what we'd do for you — and whether we're the right fit.</p>
-          <div class="contact-details">
-            <div class="contact-detail">
-              <div class="contact-detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
-              <div>
-                <div style="font-weight:600;font-size:0.9rem;color:#fff;margin-bottom:0.1rem">WhatsApp Us</div>
-                <div>Available 9am–9pm IST, Mon–Sat</div>
-              </div>
-            </div>
-            <div class="contact-detail">
-              <div class="contact-detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-              <div>
-                <div style="font-weight:600;font-size:0.9rem;color:#fff;margin-bottom:0.1rem">Email</div>
-                <div>freedomhive@gmail.com</div>
-              </div>
-            </div>
-            <div class="contact-detail">
-              <div class="contact-detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-              <div>
-                <div style="font-weight:600;font-size:0.9rem;color:#fff;margin-bottom:0.1rem">Location</div>
-                <div>Nashik, Maharashtra, India</div>
-              </div>
-            </div>
-          </div>
-          <div style="margin-top:2rem;background:rgba(0,166,255,0.05);border:1px solid var(--border);border-radius:16px;padding:1.5rem">
-            <div style="font-size:0.8rem;color:var(--blue);font-weight:600;margin-bottom:0.75rem">WHY BOOK A CALL?</div>
-            <div style="display:flex;flex-direction:column;gap:0.5rem">
-              <div style="font-size:0.85rem;color:var(--muted);display:flex;gap:0.5rem"><span style="color:var(--blue)">✓</span> 100% free — no obligation</div>
-              <div style="font-size:0.85rem;color:var(--muted);display:flex;gap:0.5rem"><span style="color:var(--blue)">✓</span> Actionable insights you can use immediately</div>
-              <div style="font-size:0.85rem;color:var(--muted);display:flex;gap:0.5rem"><span style="color:var(--blue)">✓</span> Custom plan tailored to your goals</div>
-              <div style="font-size:0.85rem;color:var(--muted);display:flex;gap:0.5rem"><span style="color:var(--blue)">✓</span> No pushy sales — just honest advice</div>
-            </div>
-          </div>
-        </div>
-        <div class="reveal reveal-delay-2">
-          <form id="contact-form" onsubmit="submitForm(event)">
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label">Your Name *</label>
-                <input class="form-input" type="text" placeholder="Raj Sharma" required id="f-name">
-              </div>
-              <div class="form-group">
-                <label class="form-label">Phone Number *</label>
-                <input class="form-input" type="tel" placeholder="+91 98765 43210" required id="f-phone">
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Email Address *</label>
-              <input class="form-input" type="email" placeholder="raj@yourbusiness.com" required id="f-email">
-            </div>
-            <div class="form-group">
-              <label class="form-label">Business Name</label>
-              <input class="form-input" type="text" placeholder="Your Business Name" id="f-business">
-            </div>
-            <div class="form-group">
-              <label class="form-label">Service You're Interested In *</label>
-              <select class="form-select form-input" required id="f-service">
-                <option value="" disabled selected>Select a service</option>
-                <option>Meta Ads / Facebook Ads</option>
-                <option>Website Design</option>
-                <option>Landing Page Design</option>
-                <option>Brand Identity Design</option>
-                <option>Graphic / Carousel Design</option>
-                <option>Performance Marketing</option>
-                <option>Full Package (Everything)</option>
-                <option>Not Sure — Need Advice</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Tell Us About Your Business</label>
-              <textarea class="form-textarea" placeholder="What does your business do? What are your main goals? Any specific challenges you're facing?" id="f-message"></textarea>
-            </div>
-            <button type="submit" class="btn-primary" style="width:100%;justify-content:center;border:none;cursor:pointer;font-size:1rem;padding:1rem">Book My Free Strategy Call →</button>
-          </form>
-          <div class="success-msg" id="success-msg">
-            ✅ Thank you! We've received your message and will contact you within 24 hours to schedule your strategy call.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
-
-<!-- FOOTER -->
-<footer style="background:var(--navy);border-top:1px solid var(--border2);padding:4rem 2rem 2rem">
-  <div class="container">
-    <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem">
-      <div>
-        <a class="nav-logo" href="#" onclick="showPage('home')" style="font-size:1.1rem;margin-bottom:1rem;display:flex;align-items:center;gap:0.4rem">
-          <img class="logo-mark" src="logo.png" alt="Freedom Studio" style="width:30px;height:30px">
-          Freedom Studio
+    <div class="wrap">
+      <div class="cta">
+        <h2>Ready to get your digital menu?</h2>
+        <p>Tap the button, say hi, and we'll get started on your menu card.</p>
+        <a class="btn" href="https://wa.me/918275872736?text=Hi%2C%20I%20want%20to%20make%20a%20digital%20menu%20card%20for%20my%20restaurant." target="_blank" rel="noopener">
+          <svg><use href="#wa"/></svg> Start on WhatsApp
         </a>
-        <p style="color:var(--muted);font-size:0.85rem;line-height:1.8;margin-top:0.5rem">Premium digital agency helping local businesses, restaurants, startups, and e-commerce brands grow through design and performance marketing.</p>
-      </div>
-      <div>
-        <div style="font-size:0.75rem;color:var(--blue);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:1rem">Pages</div>
-        <div style="display:flex;flex-direction:column;gap:0.5rem">
-          <a href="#" onclick="showPage('home')" style="color:var(--muted);text-decoration:none;font-size:0.85rem;transition:color 0.2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color=''">Home</a>
-          <a href="#" onclick="showPage('services')" style="color:var(--muted);text-decoration:none;font-size:0.85rem" onmouseover="this.style.color='#fff'" onmouseout="this.style.color=''">Services</a>
-          <a href="#" onclick="showPage('portfolio')" style="color:var(--muted);text-decoration:none;font-size:0.85rem" onmouseover="this.style.color='#fff'" onmouseout="this.style.color=''">Portfolio</a>
-          <a href="#" onclick="showPage('pricing')" style="color:var(--muted);text-decoration:none;font-size:0.85rem" onmouseover="this.style.color='#fff'" onmouseout="this.style.color=''">Pricing</a>
-          <a href="#" onclick="showPage('about')" style="color:var(--muted);text-decoration:none;font-size:0.85rem" onmouseover="this.style.color='#fff'" onmouseout="this.style.color=''">About</a>
-        </div>
-      </div>
-      <div>
-        <div style="font-size:0.75rem;color:var(--blue);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:1rem">Services</div>
-        <div style="display:flex;flex-direction:column;gap:0.5rem">
-          <a href="#" onclick="showPage('services')" style="color:var(--muted);text-decoration:none;font-size:0.85rem">Meta Ads</a>
-          <a href="#" onclick="showPage('services')" style="color:var(--muted);text-decoration:none;font-size:0.85rem">Website Design</a>
-          <a href="#" onclick="showPage('services')" style="color:var(--muted);text-decoration:none;font-size:0.85rem">Brand Identity</a>
-          <a href="#" onclick="showPage('services')" style="color:var(--muted);text-decoration:none;font-size:0.85rem">Landing Pages</a>
-          <a href="#" onclick="showPage('services')" style="color:var(--muted);text-decoration:none;font-size:0.85rem">Graphic Design</a>
-          <a href="#" onclick="showPage('services')" style="color:var(--muted);text-decoration:none;font-size:0.85rem">Video Editing</a>
-          <a href="#" onclick="showPage('services')" style="color:var(--muted);text-decoration:none;font-size:0.85rem">AI-Powered Creative</a>
-        </div>
-      </div>
-      <div>
-        <div style="font-size:0.75rem;color:var(--blue);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:1rem">Contact</div>
-        <div style="display:flex;flex-direction:column;gap:0.5rem">
-          <span style="color:var(--muted);font-size:0.85rem">Nashik, Maharashtra</span>
-          <span style="color:var(--muted);font-size:0.85rem">freedomhive@gmail.com</span>
-          <a href="#" onclick="showPage('contact')" style="color:var(--blue);text-decoration:none;font-size:0.85rem;margin-top:0.5rem;font-weight:600">Book a Free Call →</a>
-        </div>
+        <span class="phone-num">Or call / WhatsApp: <a href="tel:+918275872736">+91 82758 72736</a></span>
       </div>
     </div>
-    <div style="border-top:1px solid var(--border2);padding-top:2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem">
-      <span style="color:var(--muted);font-size:0.8rem">© 2025 Freedom Studio. All rights reserved.</span>
-      <span style="color:var(--muted);font-size:0.8rem">We Build Brands That Grow.</span>
-    </div>
-  </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">&copy; <span id="y"></span> Digital Menu Cards. All rights reserved.</div>
 </footer>
 
-<!-- Floating Buttons -->
-<a class="whatsapp-btn" href="https://wa.me/918275872736" target="_blank" rel="noopener" title="Chat on WhatsApp">
-  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+<!-- Floating WhatsApp button -->
+<a class="float" href="https://wa.me/918275872736?text=Hi%2C%20I%20want%20to%20make%20a%20digital%20menu%20card%20for%20my%20restaurant." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg><use href="#wa"/></svg>
 </a>
-<a class="sticky-cta" href="#" onclick="showPage('contact')">📞 Book Free Call</a>
 
-<script>
-// ==========================================
-// PAGE NAVIGATION
-// ==========================================
-function showPage(name) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  const target = document.getElementById('page-' + name);
-  if (target) {
-    target.classList.add('active');
-    window.scrollTo({top: 0, behavior: 'smooth'});
-    setTimeout(initReveal, 100);
-  }
-}
-
-// ==========================================
-// MOBILE MENU
-// ==========================================
-document.getElementById('hamburger').addEventListener('click', () => {
-  document.getElementById('mobile-menu').classList.add('open');
-});
-document.getElementById('mobile-close').addEventListener('click', () => {
-  document.getElementById('mobile-menu').classList.remove('open');
-});
-function closeMobileMenu() {
-  document.getElementById('mobile-menu').classList.remove('open');
-}
-
-// ==========================================
-// NAV SCROLL
-// ==========================================
-window.addEventListener('scroll', () => {
-  const nav = document.getElementById('navbar');
-  if (window.scrollY > 50) nav.classList.add('scrolled');
-  else nav.classList.remove('scrolled');
-});
-
-// ==========================================
-// CUSTOM CURSOR
-// ==========================================
-const cursor = document.getElementById('cursor');
-const trail = document.getElementById('cursor-trail');
-let cx = 0, cy = 0;
-document.addEventListener('mousemove', e => {
-  cx = e.clientX; cy = e.clientY;
-  cursor.style.left = cx + 'px';
-  cursor.style.top = cy + 'px';
-});
-function animateTrail() {
-  trail.style.left = cx + 'px';
-  trail.style.top = cy + 'px';
-  requestAnimationFrame(animateTrail);
-}
-animateTrail();
-document.querySelectorAll('a, button, .service-card, .portfolio-card, .faq-item').forEach(el => {
-  el.addEventListener('mouseenter', () => {
-    cursor.style.transform = 'translate(-50%,-50%) scale(2)';
-    trail.style.transform = 'translate(-50%,-50%) scale(1.5)';
-  });
-  el.addEventListener('mouseleave', () => {
-    cursor.style.transform = 'translate(-50%,-50%) scale(1)';
-    trail.style.transform = 'translate(-50%,-50%) scale(1)';
-  });
-});
-
-// ==========================================
-// SCROLL REVEAL
-// ==========================================
-function initReveal() {
-  const revealEls = document.querySelectorAll('.reveal:not(.visible)');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        observer.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.1 });
-  revealEls.forEach(el => observer.observe(el));
-}
-window.addEventListener('load', initReveal);
-window.addEventListener('scroll', initReveal);
-initReveal();
-
-// ==========================================
-// FAQ TOGGLE
-// ==========================================
-function toggleFaq(item) {
-  const isOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
-  if (!isOpen) item.classList.add('open');
-}
-
-// ==========================================
-// PORTFOLIO FILTER
-// ==========================================
-document.querySelectorAll('.filter-btn').forEach(btn => {
-  btn.addEventListener('click', function() {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    this.classList.add('active');
-    const filter = this.dataset.filter;
-    document.querySelectorAll('.portfolio-card').forEach(card => {
-      if (filter === 'all' || card.dataset.cat === filter) {
-        card.style.display = '';
-        setTimeout(() => card.style.opacity = '1', 10);
-      } else {
-        card.style.opacity = '0';
-        setTimeout(() => card.style.display = 'none', 300);
-      }
-    });
-  });
-});
-
-// ==========================================
-// CONTACT FORM
-// ==========================================
-function submitForm(e) {
-  e.preventDefault();
-  const name = document.getElementById('f-name').value;
-  const phone = document.getElementById('f-phone').value;
-  const email = document.getElementById('f-email').value;
-  const business = document.getElementById('f-business').value || 'Not provided';
-  const service = document.getElementById('f-service').value;
-  const message = document.getElementById('f-message').value || 'No additional message';
-
-  const waMsg = encodeURIComponent(
-    '🔔 *New Strategy Call Request*\n\n' +
-    '👤 *Name:* ' + name + '\n' +
-    '📱 *Phone:* ' + phone + '\n' +
-    '📧 *Email:* ' + email + '\n' +
-    '🏢 *Business:* ' + business + '\n' +
-    '⚡ *Service:* ' + service + '\n' +
-    '💬 *Message:* ' + message + '\n\n' +
-    '📅 Submitted: ' + new Date().toLocaleString('en-IN', {timeZone: 'Asia/Kolkata'})
-  );
-
-  const waURL = 'https://wa.me/918275872736?text=' + waMsg;
-  window.open(waURL, '_blank');
-
-  document.getElementById('contact-form').style.display = 'none';
-  document.getElementById('success-msg').style.display = 'block';
-}
-
-// ==========================================
-// TEXT ANIMATION — Hero
-// ==========================================
-(function() {
-  const lines = document.querySelectorAll('.hero h1 .line1, .hero h1 .line2');
-  lines.forEach((el, i) => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'opacity 0.8s, transform 0.8s';
-    setTimeout(() => {
-      el.style.opacity = '1';
-      el.style.transform = 'none';
-    }, 300 + i * 200);
-  });
-  const sub = document.querySelector('.hero-sub');
-  if (sub) {
-    sub.style.opacity = '0';
-    sub.style.transition = 'opacity 0.8s';
-    setTimeout(() => sub.style.opacity = '1', 800);
-  }
-  const actions = document.querySelector('.hero-actions');
-  if (actions) {
-    actions.style.opacity = '0';
-    actions.style.transition = 'opacity 0.8s';
-    setTimeout(() => actions.style.opacity = '1', 1000);
-  }
-  const stats = document.querySelector('.hero-stats');
-  if (stats) {
-    stats.style.opacity = '0';
-    stats.style.transition = 'opacity 0.8s';
-    setTimeout(() => stats.style.opacity = '1', 1200);
-  }
-})();
-
-// ==========================================
-// HERO VIDEO: make sure the right one plays
-// ==========================================
-(function() {
-  const desktopVid = document.querySelector('.hero-video-desktop');
-  const mobileVid = document.querySelector('.hero-video-mobile');
-  function playActive() {
-    const isMobile = window.matchMedia('(max-width:768px)').matches;
-    const active = isMobile ? mobileVid : desktopVid;
-    const other = isMobile ? desktopVid : mobileVid;
-    if (other && !other.paused) other.pause();
-    if (active) {
-      const p = active.play();
-      if (p && p.catch) p.catch(() => {});
-    }
-  }
-  window.addEventListener('load', playActive);
-  window.addEventListener('resize', playActive);
-})();
-</script>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
